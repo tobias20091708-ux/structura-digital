@@ -1,0 +1,87 @@
+import type { Metadata } from "next";
+import { Mail, Phone, Clock } from "lucide-react";
+import { Container } from "@/components/ui/Container";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Badge } from "@/components/ui/Badge";
+import { GradientText } from "@/components/ui/GradientText";
+import { ContactForm } from "@/components/contact/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Kontakt — Structura Digital",
+  description:
+    "Book en uforpligtende samtale med Structura Digital om din næste hjemmeside, webshop, kursusplatform eller IT-strukturering.",
+};
+
+const infoItems = [
+  {
+    icon: Mail,
+    label: "Email",
+    value: "hej@structuradigital.dk",
+    href: "mailto:hej@structuradigital.dk",
+  },
+  {
+    icon: Phone,
+    label: "Telefon",
+    value: "+45 12 34 56 78",
+    href: "tel:+4512345678",
+  },
+  {
+    icon: Clock,
+    label: "Svartid",
+    value: "Typisk inden for 1-2 hverdage",
+  },
+];
+
+export default function KontaktPage() {
+  return (
+    <section className="relative overflow-hidden pt-40 pb-28">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(34,211,238,0.22),transparent)]"
+      />
+      <Container>
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <AnimatedSection direction="left">
+              <Badge>Kontakt</Badge>
+              <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+                Lad os give din idé <GradientText>struktur</GradientText>
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-white/55">
+                Fortæl os om dit projekt, så vender vi tilbage med et konkret forslag til løsning,
+                tidsplan og pris — helt uforpligtende.
+              </p>
+
+              <ul className="mt-10 space-y-5">
+                {infoItems.map((item) => (
+                  <li key={item.label} className="flex items-start gap-4">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-accent-violet">
+                      <item.icon className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="text-xs text-white/40">{item.label}</p>
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="text-sm font-medium text-white hover:text-accent-cyan"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        <p className="text-sm font-medium text-white">{item.value}</p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </AnimatedSection>
+          </div>
+
+          <AnimatedSection direction="right" delay={0.1}>
+            <ContactForm />
+          </AnimatedSection>
+        </div>
+      </Container>
+    </section>
+  );
+}
