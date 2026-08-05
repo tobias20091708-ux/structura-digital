@@ -1,8 +1,8 @@
 import { Hero } from "@/components/home/Hero";
-import { ServicesMarquee } from "@/components/home/ServicesMarquee";
+import { PainPoints } from "@/components/home/PainPoints";
 import { Services } from "@/components/home/Services";
-import { PortfolioPreview } from "@/components/home/PortfolioPreview";
-import { Process } from "@/components/home/Process";
+import { SocialProof } from "@/components/home/SocialProof";
+import { ResultShift } from "@/components/home/ResultShift";
 import { FaqSection } from "@/components/home/FaqSection";
 import { Cta } from "@/components/home/Cta";
 
@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ServicesMarquee />
+      <PainPoints />
       <Services />
-      <PortfolioPreview />
-      <Process />
+      <SocialProof />
+      <ResultShift />
       <FaqSection />
       <Cta />
     </>

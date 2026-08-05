@@ -8,6 +8,7 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
+import { ctaText } from "@/lib/data";
 
 const links = [
   { href: "/", label: "Forside" },
@@ -75,7 +76,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <Button href="/kontakt" size="sm">
-              Start dit projekt
+              {ctaText}
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
           </div>
@@ -118,7 +119,7 @@ export function Navbar() {
               ))}
             </nav>
             <Button href="/kontakt" className="mt-3 w-full" onClick={() => setOpen(false)}>
-              Start dit projekt
+              {ctaText}
             </Button>
           </motion.div>
         )}

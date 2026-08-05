@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { GradientText } from "@/components/ui/GradientText";
 import { BrowserMockupCard } from "@/components/portfolio/BrowserMockupCard";
-import { portfolioItems } from "@/lib/data";
+import { portfolioItems, ctaText } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Portfolio — Structura Digital",
@@ -65,7 +65,7 @@ export default function PortfolioPage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Button href="/kontakt" size="lg">
-                  Book en samtale
+                  {ctaText}
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>
                 <Button href="/priser" variant="outline" size="lg">

@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Structura Digital — Hjemmesider, online kurser & IT-strukturering",
+  title: "Structura Digital — Hjemmesider, kurser & lead pages der får din telefon til at ringe",
   description:
-    "Structura Digital designer og bygger hjemmesider, online kursusplatforme og IT-strukturer, der er skabt til at vokse med din forretning. Priser fra 999 kr.",
+    "Structura Digital bygger hjemmesider, online kurser, lead pages og laver data-tjek for små virksomheder. Starter fra 985 kr — ring for et tilbud på 30 13 73 28.",
 };
 
 export default function RootLayout({

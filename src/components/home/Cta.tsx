@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/Button";
 import { GradientText } from "@/components/ui/GradientText";
+import { contact, ctaText } from "@/lib/data";
 
 export function Cta() {
   return (
@@ -15,21 +16,21 @@ export function Cta() {
               className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(139,92,246,0.35),transparent)]"
             />
             <h2 className="mx-auto max-w-2xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Klar til at give din forretning <GradientText>struktur</GradientText>?
+              Dine konkurrenter stopper ikke med at{" "}
+              <GradientText>vokse online</GradientText> — hvorfor skulle du?
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-white/55">
-              Book en uforpligtende samtale, og få et skræddersyet forslag til dit projekt —
-              priser starter fra 999 kr.
+              Hver dag uden en ordentlig hjemmeside er en dag dine kunder finder en anden.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Button href="/kontakt" size="lg">
-                Book en samtale
+                {ctaText}
                 <ArrowUpRight className="h-4 w-4" />
               </Button>
-              <Button href="/priser" variant="outline" size="lg">
-                Se priser
-              </Button>
             </div>
+            <p className="mt-6 text-sm text-white/45">
+              Uforpligtende samtale · Svar inden 24 timer · Tlf. {contact.phone}
+            </p>
           </div>
         </AnimatedSection>
       </Container>

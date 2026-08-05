@@ -5,7 +5,13 @@ import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
-const budgets = ["999 – 4.999 kr.", "4.999 – 9.999 kr.", "9.999 kr.+", "Ved ikke endnu"];
+const projectTypes = [
+  "Hjemmeside",
+  "Online kursus / platform",
+  "Lead page",
+  "Data-tjek / reparation",
+  "Ved ikke endnu",
+];
 
 const inputClasses =
   "w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-accent-violet/60 focus:bg-white/[0.05]";
@@ -25,7 +31,7 @@ export function ContactForm() {
         <CheckCircle2 className="h-12 w-12 text-accent-cyan" />
         <h3 className="mt-5 text-2xl font-semibold text-white">Tak for din besked!</h3>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/55">
-          Vi vender tilbage hurtigst muligt — normalt inden for 1-2 hverdage.
+          Vi vender tilbage hurtigst muligt — svar inden 24 timer.
         </p>
         <Button variant="outline" className="mt-8" onClick={() => setStatus("idle")}>
           Send en ny besked
@@ -70,18 +76,18 @@ export function ContactForm() {
       </Field>
 
       <div>
-        <span className="mb-2 block text-sm font-medium text-white/70">Budget</span>
+        <span className="mb-2 block text-sm font-medium text-white/70">Hvad drejer det sig om?</span>
         <div className="flex flex-wrap gap-2">
-          {budgets.map((budget) => (
+          {projectTypes.map((type) => (
             <label
-              key={budget}
+              key={type}
               className={cn(
                 "cursor-pointer rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-white/60 transition-colors",
                 "has-[:checked]:border-accent-violet/60 has-[:checked]:bg-accent-violet/15 has-[:checked]:text-white"
               )}
             >
-              <input type="radio" name="budget" value={budget} className="sr-only" />
-              {budget}
+              <input type="radio" name="project_type" value={type} className="sr-only" />
+              {type}
             </label>
           ))}
         </div>

@@ -5,30 +5,31 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { GradientText } from "@/components/ui/GradientText";
 import { ContactForm } from "@/components/contact/ContactForm";
+import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Kontakt — Structura Digital",
   description:
-    "Book en uforpligtende samtale med Structura Digital om din næste hjemmeside, webshop, kursusplatform eller IT-strukturering.",
+    "Få et gratis tilbud fra Structura Digital på din næste hjemmeside, kursusplatform, lead page eller data-tjek. Svar inden 24 timer.",
 };
 
 const infoItems = [
   {
     icon: Mail,
     label: "Email",
-    value: "hej@structuradigital.dk",
-    href: "mailto:hej@structuradigital.dk",
+    value: contact.email,
+    href: `mailto:${contact.email}`,
   },
   {
     icon: Phone,
     label: "Telefon",
-    value: "+45 12 34 56 78",
-    href: "tel:+4512345678",
+    value: contact.phone,
+    href: contact.phoneHref,
   },
   {
     icon: Clock,
     label: "Svartid",
-    value: "Typisk inden for 1-2 hverdage",
+    value: "Svar inden 24 timer",
   },
 ];
 
@@ -45,11 +46,11 @@ export default function KontaktPage() {
             <AnimatedSection direction="left">
               <Badge>Kontakt</Badge>
               <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Lad os give din idé <GradientText>struktur</GradientText>
+                Få et gratis <GradientText>tilbud</GradientText>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-white/55">
-                Fortæl os om dit projekt, så vender vi tilbage med et konkret forslag til løsning,
-                tidsplan og pris — helt uforpligtende.
+                Fortæl os om dit projekt, så vender vi tilbage med et konkret forslag til
+                løsning, tidsplan og pris — helt uforpligtende. Ingen binding.
               </p>
 
               <ul className="mt-10 space-y-5">

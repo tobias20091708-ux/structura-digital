@@ -14,6 +14,9 @@ export function FaqSection() {
           <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
             Ofte stillede <GradientText>spørgsmål</GradientText>
           </h2>
+          <p className="mt-5 text-lg text-white/55">
+            De spørgsmål vi oftest får, besvaret med det samme.
+          </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1} className="mt-12">

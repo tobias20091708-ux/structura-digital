@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Container } from "@/components/ui/Container";
+import { contact } from "@/lib/data";
 
 function InstagramIcon() {
   return (
@@ -43,10 +44,10 @@ const columns = [
   {
     title: "Ydelser",
     links: [
-      { href: "/priser", label: "Hjemmesider" },
-      { href: "/priser", label: "Online kurser" },
-      { href: "/priser", label: "IT-strukturering" },
-      { href: "/priser", label: "Webshops" },
+      { href: "/#ydelser", label: "Hjemmesider" },
+      { href: "/#ydelser", label: "Online kurser & platforme" },
+      { href: "/#ydelser", label: "Lead Pages" },
+      { href: "/#ydelser", label: "Data Checking / Reparation" },
     ],
   },
 ];
@@ -63,12 +64,12 @@ export function Footer() {
           <div>
             <Logo />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">
-              Vi strukturerer din digitale forretning — hjemmesider, online kurser og IT, bygget
-              til at vokse.
+              Hjemmesider, online kurser, lead pages og data-tjek til små virksomheder, der vil
+              findes af flere kunder.
             </p>
             <div className="mt-5 flex items-center gap-3">
               <a
-                href="mailto:hej@structuradigital.dk"
+                href={`mailto:${contact.email}`}
                 aria-label="Email"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-white/30 hover:text-white"
               >
@@ -114,14 +115,14 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-white/50">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-accent-violet" />
-                <a href="mailto:hej@structuradigital.dk" className="hover:text-white">
-                  hej@structuradigital.dk
+                <a href={`mailto:${contact.email}`} className="hover:text-white">
+                  {contact.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-accent-violet" />
-                <a href="tel:+4512345678" className="hover:text-white">
-                  +45 12 34 56 78
+                <a href={contact.phoneHref} className="hover:text-white">
+                  {contact.phone}
                 </a>
               </li>
             </ul>
