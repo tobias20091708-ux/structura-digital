@@ -11,10 +11,10 @@ export function FaqSection() {
       <Container className="max-w-3xl">
         <AnimatedSection className="text-center">
           <Badge>Spørgsmål</Badge>
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             Ofte stillede <GradientText>spørgsmål</GradientText>
           </h2>
-          <p className="mt-5 text-lg text-white/55">
+          <p className="mt-5 text-lg text-foreground/55">
             De spørgsmål vi oftest får, besvaret med det samme.
           </p>
         </AnimatedSection>

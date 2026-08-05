@@ -12,10 +12,10 @@ export function Services() {
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge>Ydelser</Badge>
-          <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
             Det du får ud af at <GradientText>arbejde med os</GradientText>
           </h2>
-          <p className="mt-5 text-lg text-white/55">
+          <p className="mt-5 text-lg text-foreground/55">
             Fire ydelser, ét mål: at flere kunder finder og vælger dig.
           </p>
         </AnimatedSection>
@@ -24,20 +24,20 @@ export function Services() {
           {services.map((service, i) => (
             <AnimatedSection key={service.title} delay={i * 0.1}>
               <TiltCard className="glow-border h-full rounded-3xl">
-                <div className="glass relative flex h-full flex-col rounded-3xl p-8">
-                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/55">
+                <div className="card relative flex h-full flex-col rounded-3xl p-8">
+                  <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-foreground/55">
                     {service.description}
                   </p>
                   <ul className="mt-6 space-y-2.5">
                     {service.points.map((point) => (
-                      <li key={point} className="flex items-center gap-2.5 text-sm text-white/70">
-                        <Check className="h-4 w-4 shrink-0 text-accent-cyan" />
+                      <li key={point} className="flex items-center gap-2.5 text-sm text-foreground/70">
+                        <Check className="h-4 w-4 shrink-0 text-accent" />
                         {point}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-6 text-sm font-medium text-white/85">{service.result}</p>
+                  <p className="mt-6 text-sm font-medium text-foreground/85">{service.result}</p>
                 </div>
               </TiltCard>
             </AnimatedSection>
@@ -45,7 +45,7 @@ export function Services() {
         </div>
 
         <AnimatedSection delay={0.2} className="mt-12 text-center">
-          <p className="text-lg font-medium text-white">{contact.priceLine}</p>
+          <p className="text-lg font-medium text-foreground">{contact.priceLine}</p>
         </AnimatedSection>
       </Container>
     </section>

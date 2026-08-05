@@ -20,15 +20,15 @@ export default function PortfolioPage() {
       <section className="relative overflow-hidden pt-40 pb-20">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(139,92,246,0.3),transparent)]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(181,80,44,0.1),transparent)]"
         />
         <Container>
           <AnimatedSection className="mx-auto max-w-2xl text-center">
             <Badge>Portfolio</Badge>
-            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-white sm:text-6xl">
+            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
               Eksempler på <GradientText>digitalt håndværk</GradientText>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-white/55">
+            <p className="mt-6 text-lg leading-relaxed text-foreground/55">
               Nedenfor ser du seks illustrative eksempler på tværs af brancher, der viser den
               designkvalitet og struktur, dit projekt kan forvente — fra restaurant og fitness til
               webshop og kursusplatform.
@@ -52,15 +52,15 @@ export default function PortfolioPage() {
       <section className="pb-28">
         <Container>
           <AnimatedSection className="glow-border relative overflow-hidden rounded-[2.5rem] p-2">
-            <div className="glass relative overflow-hidden rounded-[2.25rem] px-8 py-16 text-center sm:px-16">
+            <div className="card relative overflow-hidden rounded-[2.25rem] px-8 py-16 text-center sm:px-16">
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(34,211,238,0.25),transparent)]"
+                className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(181,80,44,0.1),transparent)]"
               />
-              <h2 className="mx-auto max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              <h2 className="mx-auto max-w-xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Kunne dit projekt være det <GradientText>næste eksempel</GradientText>?
               </h2>
-              <p className="mx-auto mt-4 max-w-lg text-white/55">
+              <p className="mx-auto mt-4 max-w-lg text-foreground/55">
                 Fortæl os om din idé, og få et konkret forslag til struktur og design.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

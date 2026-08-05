@@ -54,16 +54,16 @@ const columns = [
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 pt-20 pb-10">
+    <footer className="relative border-t border-foreground/10 pt-20 pb-10">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-foreground/15 to-transparent"
       />
       <Container>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
             <Logo />
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-foreground/50">
               Hjemmesider, online kurser, lead pages og data-tjek til små virksomheder, der vil
               findes af flere kunder.
             </p>
@@ -71,21 +71,21 @@ export function Footer() {
               <a
                 href={`mailto:${contact.email}`}
                 aria-label="Email"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-white/30 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-colors hover:border-foreground/30 hover:text-foreground"
               >
                 <Mail className="h-4 w-4" />
               </a>
               <a
                 href="#"
                 aria-label="Instagram"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-white/30 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-colors hover:border-foreground/30 hover:text-foreground"
               >
                 <InstagramIcon />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-white/30 hover:text-white"
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-colors hover:border-foreground/30 hover:text-foreground"
               >
                 <LinkedinIcon />
               </a>
@@ -94,13 +94,13 @@ export function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="text-sm font-semibold text-white">{col.title}</h4>
+              <h4 className="text-sm font-semibold text-foreground">{col.title}</h4>
               <ul className="mt-4 space-y-3">
                 {col.links.map((link, i) => (
                   <li key={link.label + i}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/50 transition-colors hover:text-white"
+                      className="text-sm text-foreground/50 transition-colors hover:text-foreground"
                     >
                       {link.label}
                     </Link>
@@ -111,17 +111,17 @@ export function Footer() {
           ))}
 
           <div>
-            <h4 className="text-sm font-semibold text-white">Kontakt</h4>
-            <ul className="mt-4 space-y-3 text-sm text-white/50">
+            <h4 className="text-sm font-semibold text-foreground">Kontakt</h4>
+            <ul className="mt-4 space-y-3 text-sm text-foreground/50">
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-accent-violet" />
-                <a href={`mailto:${contact.email}`} className="hover:text-white">
+                <Mail className="h-4 w-4 text-accent" />
+                <a href={`mailto:${contact.email}`} className="hover:text-foreground">
                   {contact.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-accent-violet" />
-                <a href={contact.phoneHref} className="hover:text-white">
+                <Phone className="h-4 w-4 text-accent" />
+                <a href={contact.phoneHref} className="hover:text-foreground">
                   {contact.phone}
                 </a>
               </li>
@@ -129,7 +129,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-foreground/10 pt-8 text-xs text-foreground/40 sm:flex-row">
           <p>© {new Date().getFullYear()} Structura Digital. Alle rettigheder forbeholdes.</p>
           <p>CVR 00000000 · Danmark</p>
         </div>

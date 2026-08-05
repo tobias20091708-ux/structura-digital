@@ -39,9 +39,9 @@ export function Navbar() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <div
           className={cn(
-            "flex items-center justify-between rounded-2xl px-4 py-2.5 backdrop-blur-2xl transition-all duration-300",
+            "flex items-center justify-between rounded-2xl px-4 py-2.5 backdrop-blur-md transition-all duration-300",
             scrolled
-              ? "border border-white/10 bg-[#0a0b14]/85 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.8)]"
+              ? "border border-foreground/10 bg-background/90 shadow-[0_8px_24px_-16px_rgba(42,33,24,0.3)]"
               : "border border-transparent bg-transparent"
           )}
         >
@@ -58,13 +58,13 @@ export function Navbar() {
                   href={link.href}
                   className={cn(
                     "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                    active ? "text-white" : "text-white/60 hover:text-white"
+                    active ? "text-foreground" : "text-foreground/60 hover:text-foreground"
                   )}
                 >
                   {active && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 rounded-full bg-white/[0.08]"
+                      className="absolute inset-0 rounded-full bg-foreground/[0.08]"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -84,7 +84,7 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-full p-2 text-white md:hidden"
+            className="inline-flex items-center justify-center rounded-full p-2 text-foreground md:hidden"
             aria-label="Åbn menu"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,7 +99,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="mx-6 mt-2 rounded-2xl border border-white/10 bg-[#0a0b14]/95 p-4 backdrop-blur-2xl md:hidden"
+            className="mx-6 mt-2 rounded-2xl border border-foreground/10 bg-background/95 p-4 backdrop-blur-md md:hidden"
           >
             <nav className="flex flex-col gap-1">
               {links.map((link) => (
@@ -110,8 +110,8 @@ export function Navbar() {
                   className={cn(
                     "rounded-xl px-4 py-3 text-base font-medium transition-colors",
                     pathname === link.href
-                      ? "bg-white/[0.08] text-white"
-                      : "text-white/70 hover:bg-white/[0.05] hover:text-white"
+                      ? "bg-foreground/[0.08] text-foreground"
+                      : "text-foreground/70 hover:bg-foreground/[0.05] hover:text-foreground"
                   )}
                 >
                   {link.label}

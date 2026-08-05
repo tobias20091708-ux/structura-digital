@@ -14,7 +14,7 @@ const projectTypes = [
 ];
 
 const inputClasses =
-  "w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-white/30 outline-none transition-colors focus:border-accent-violet/60 focus:bg-white/[0.05]";
+  "w-full rounded-2xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-accent/60 focus:bg-foreground/[0.05]";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -27,10 +27,10 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="glass flex flex-col items-center justify-center rounded-3xl px-8 py-20 text-center">
-        <CheckCircle2 className="h-12 w-12 text-accent-cyan" />
-        <h3 className="mt-5 text-2xl font-semibold text-white">Tak for din besked!</h3>
-        <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/55">
+      <div className="card flex flex-col items-center justify-center rounded-3xl px-8 py-20 text-center">
+        <CheckCircle2 className="h-12 w-12 text-accent" />
+        <h3 className="mt-5 text-2xl font-semibold text-foreground">Tak for din besked!</h3>
+        <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/55">
           Vi vender tilbage hurtigst muligt — svar inden 24 timer.
         </p>
         <Button variant="outline" className="mt-8" onClick={() => setStatus("idle")}>
@@ -41,7 +41,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="glass space-y-5 rounded-3xl p-8">
+    <form onSubmit={handleSubmit} className="card space-y-5 rounded-3xl p-8">
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <Field label="Navn" htmlFor="name">
           <input
@@ -76,14 +76,14 @@ export function ContactForm() {
       </Field>
 
       <div>
-        <span className="mb-2 block text-sm font-medium text-white/70">Hvad drejer det sig om?</span>
+        <span className="mb-2 block text-sm font-medium text-foreground/70">Hvad drejer det sig om?</span>
         <div className="flex flex-wrap gap-2">
           {projectTypes.map((type) => (
             <label
               key={type}
               className={cn(
-                "cursor-pointer rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-white/60 transition-colors",
-                "has-[:checked]:border-accent-violet/60 has-[:checked]:bg-accent-violet/15 has-[:checked]:text-white"
+                "cursor-pointer rounded-full border border-foreground/10 bg-foreground/[0.03] px-4 py-2 text-xs font-medium text-foreground/60 transition-colors",
+                "has-[:checked]:border-accent/60 has-[:checked]:bg-accent/15 has-[:checked]:text-foreground"
               )}
             >
               <input type="radio" name="project_type" value={type} className="sr-only" />
@@ -132,7 +132,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={htmlFor} className="mb-2 block text-sm font-medium text-white/70">
+      <label htmlFor={htmlFor} className="mb-2 block text-sm font-medium text-foreground/70">
         {label}
       </label>
       {children}

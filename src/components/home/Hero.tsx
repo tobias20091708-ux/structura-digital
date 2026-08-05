@@ -1,6 +1,5 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -8,24 +7,13 @@ import { Container } from "@/components/ui/Container";
 import { GradientText } from "@/components/ui/GradientText";
 import { ctaText } from "@/lib/data";
 
-const Hero3DScene = dynamic(() => import("./Hero3DScene"), {
-  ssr: false,
-  loading: () => (
-    <div className="h-full w-full animate-pulse bg-[radial-gradient(circle_at_60%_40%,rgba(139,92,246,0.25),transparent_60%)]" />
-  ),
-});
-
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-20">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(139,92,246,0.35),transparent),radial-gradient(ellipse_60%_50%_at_100%_20%,rgba(34,211,238,0.18),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_55%_at_50%_-10%,rgba(181,80,44,0.12),transparent)]"
       />
-
-      <div className="absolute inset-0 -z-10">
-        <Hero3DScene />
-      </div>
 
       <Container className="relative">
         <div className="mx-auto max-w-3xl text-center">
@@ -33,7 +21,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-4xl font-semibold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl"
+            className="text-4xl font-medium leading-[1.15] tracking-tight text-foreground sm:text-6xl lg:text-7xl"
           >
             Din næste kunde søger dig lige nu
             <br />
@@ -44,7 +32,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/60"
+            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-foreground/60"
           >
             Vi bygger hjemmesider, kurser og lead pages — og tjekker at din digitale
             forretning kører fejlfrit — så små virksomheder bliver fundet, valgt og
@@ -61,7 +49,7 @@ export function Hero() {
               {ctaText}
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
-            <span className="text-sm text-white/45">Svar inden 24 timer · Ingen binding</span>
+            <span className="text-sm text-foreground/45">Svar inden 24 timer · Ingen binding</span>
           </motion.div>
         </div>
       </Container>
@@ -70,7 +58,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/40 sm:flex"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-foreground/40 sm:flex"
       >
         <span className="text-xs tracking-wide uppercase">Scroll</span>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.6, repeat: Infinity }}>
