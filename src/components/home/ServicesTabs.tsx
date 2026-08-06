@@ -22,7 +22,9 @@ export function ServicesTabs() {
             Det vi kan hjælpe dig med
           </h2>
           <p className="mt-4 text-lg text-muted">
-            Fire ydelser, ét mål: at flere kunder finder og vælger dig.
+            Vi bygger hjemmesider, onlinekurser og målrettede landingssider – og sørger
+            for, at dine data og kontaktoplysninger fungerer korrekt på tværs af
+            platforme.
           </p>
         </AnimatedSection>
 

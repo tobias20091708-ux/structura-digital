@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Phone, Clock } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
@@ -14,12 +14,6 @@ export const metadata: Metadata = {
 };
 
 const infoItems = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: contact.email,
-    href: `mailto:${contact.email}`,
-  },
   {
     icon: Phone,
     label: "Telefon",

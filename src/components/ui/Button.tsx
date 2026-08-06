@@ -4,7 +4,7 @@ import { cn } from "@/lib/cn";
 type ButtonProps = {
   children: React.ReactNode;
   href?: string;
-  variant?: "primary" | "ghost" | "outline";
+  variant?: "primary" | "ghost" | "outline" | "outlineOnDark";
   size?: "sm" | "md" | "lg";
   className?: string;
   type?: "button" | "submit";
@@ -25,6 +25,8 @@ const variants = {
     "text-white bg-accent shadow-[0_1px_2px_rgba(31,41,55,0.08),0_10px_24px_-10px_rgba(234,88,12,0.55)] hover:bg-accent-strong hover:-translate-y-0.5",
   outline:
     "text-foreground border border-foreground/15 hover:border-foreground/30 bg-foreground/[0.02] hover:bg-foreground/[0.06] hover:-translate-y-0.5",
+  outlineOnDark:
+    "text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-white/35 hover:-translate-y-0.5",
   ghost: "text-foreground/80 hover:text-foreground hover:bg-foreground/[0.06]",
 };
 

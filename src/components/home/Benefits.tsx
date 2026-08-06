@@ -10,11 +10,12 @@ export function Benefits() {
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge>Om os</Badge>
           <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Derfor vælger små virksomheder os
+            Derfor vælger virksomheder os
           </h2>
           <p className="mt-4 text-lg text-muted">
-            Vi er en dansk digitalpartner for virksomheder der vil findes online — uden
-            bureaukrati og uden bureau-priser.
+            Vi er en dansk digital partner for virksomheder, der vil stå stærkere
+            online — med personlig kontakt, gennemskuelige priser og løsninger, der er
+            bygget til deres behov.
           </p>
         </AnimatedSection>
 

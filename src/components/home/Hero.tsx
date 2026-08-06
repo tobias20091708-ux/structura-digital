@@ -4,93 +4,65 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { ctaText } from "@/lib/data";
+import { HeroParticles } from "@/components/ui/HeroParticles";
 
 export function Hero() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden pt-36 pb-20 sm:pt-44 sm:pb-28">
+    <section className="relative overflow-hidden bg-dark pt-40 pb-24 sm:pt-48 sm:pb-32">
+      <div
+        aria-hidden
+        className="absolute inset-0 bg-gradient-to-b from-[#0a1428] via-[#0f1f3d] to-dark"
+      />
+      <HeroParticles />
+
       <Container className="relative">
-        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-12">
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl leading-[1.1] font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
-            >
-              Professionelle hjemmesider til din virksomhed
-            </motion.h1>
+        <div className="mx-auto max-w-3xl text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-semibold text-white/80 backdrop-blur-sm"
+          >
+            <span
+              className={`h-1.5 w-1.5 rounded-full bg-primary-light ${reduce ? "" : "animate-pulse"}`}
+            />
+            Digital partner for vækst
+          </motion.span>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="mt-6 max-w-lg text-lg leading-relaxed text-muted md:text-xl"
-            >
-              Vi bygger hjemmesider, kursusplatforme og lead pages der skaber vækst for
-              små virksomheder i Danmark.
-            </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mt-6 text-4xl leading-[1.1] font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+          >
+            Professionelle hjemmesider til din virksomhed
+          </motion.h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-10 flex flex-wrap items-center gap-4"
-            >
-              <Button href="/#services" size="lg">
-                Se vores services
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </Button>
-              <Button href="/kontakt" variant="outline" size="lg">
-                Kontakt os
-              </Button>
-            </motion.div>
-          </div>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/60 md:text-xl"
+          >
+            Vi bygger hjemmesider, kursusplatforme og lead pages der skaber vækst for
+            små virksomheder i Danmark.
+          </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="relative mx-auto aspect-square w-full max-w-md lg:max-w-none"
-            style={{ perspective: "900px" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-10 flex flex-wrap items-center justify-center gap-4"
           >
-            <motion.div
-              className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#0f172a] via-primary to-primary-light"
-              style={{ transformStyle: "preserve-3d" }}
-              animate={reduce ? undefined : { rotateX: [0, 2.5, -2, 0], rotateY: [0, -3, 2.5, 0] }}
-              transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <div
-              aria-hidden
-              className="absolute inset-0 rounded-[2.5rem] opacity-[0.15] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:28px_28px]"
-            />
-            <motion.div
-              className="absolute -top-6 -right-6 h-28 w-28 rounded-3xl bg-accent/90 shadow-xl"
-              animate={reduce ? undefined : { y: [0, -10, 0], rotate: [0, 6, 0] }}
-              transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="absolute top-1/3 left-6 h-16 w-16 rounded-2xl border-2 border-white/40"
-              animate={reduce ? undefined : { y: [0, 8, 0], rotate: [0, -8, 0] }}
-              transition={{ duration: 11, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            />
-            <motion.div
-              className="absolute -bottom-8 left-10 h-40 w-40 rounded-full bg-white/10 backdrop-blur-sm"
-              animate={reduce ? undefined : { y: [0, -14, 0], x: [0, 8, 0] }}
-              transition={{ duration: 13, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            />
-            <motion.div
-              className="absolute right-10 bottom-10 h-20 w-20 rounded-2xl bg-white/15"
-              animate={reduce ? undefined : { y: [0, 10, 0], rotate: [0, -5, 0] }}
-              transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-            />
-            <motion.div
-              className="absolute top-10 left-10 h-10 w-10 rounded-full bg-success"
-              animate={reduce ? undefined : { y: [0, 9, 0], x: [0, -6, 0] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            />
+            <Button href="/#services" size="lg">
+              Se vores services
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </Button>
+            <Button href="/kontakt" variant="outlineOnDark" size="lg">
+              Kontakt os
+            </Button>
           </motion.div>
         </div>
       </Container>

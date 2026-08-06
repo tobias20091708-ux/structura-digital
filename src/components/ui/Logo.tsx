@@ -1,6 +1,7 @@
 import { Boxes } from "lucide-react";
 import { cn } from "@/lib/cn";
 
+// Placeholder mark — this is the single place to swap in the client's final logo file later.
 export function Logo({ className, invert }: { className?: string; invert?: boolean }) {
   return (
     <span className={cn("inline-flex items-center gap-2.5 font-bold tracking-tight", className)}>
