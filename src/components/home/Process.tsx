@@ -5,11 +5,11 @@ import { processSteps } from "@/lib/data";
 
 export function Process() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-dark py-20 sm:py-28">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
-          <Badge>Sådan foregår det</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <Badge invert>Sådan foregår det</Badge>
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Fra idé til lancering
           </h2>
         </AnimatedSection>

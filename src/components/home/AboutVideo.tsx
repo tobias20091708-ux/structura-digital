@@ -9,14 +9,14 @@ import { Badge } from "@/components/ui/Badge";
  */
 export function AboutVideo({ videoUrl }: { videoUrl?: string } = {}) {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-dark py-20 sm:py-28">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
-          <Badge>Lær os at kende</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <Badge invert>Lær os at kende</Badge>
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Se hvem vi er, og hvordan vi arbejder
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-white/60">
             En kort video om hvem vi er, hvad vi laver, og hvordan vi hjælper din
             virksomhed med at stå stærkere online.
           </p>

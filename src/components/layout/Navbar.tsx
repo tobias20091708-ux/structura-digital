@@ -21,6 +21,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const onDark = pathname === "/" && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -46,7 +47,7 @@ export function Navbar() {
           )}
         >
           <Link href="/" aria-label="Structura Digital – forside">
-            <Logo />
+            <Logo invert={onDark} />
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex">
@@ -58,7 +59,11 @@ export function Navbar() {
                   href={link.href}
                   className={cn(
                     "relative rounded-lg px-4 py-2 text-sm font-medium transition-colors",
-                    active ? "text-primary-light" : "text-foreground/70 hover:text-primary-light"
+                    active
+                      ? "text-primary-light"
+                      : onDark
+                        ? "text-white/70 hover:text-white"
+                        : "text-foreground/70 hover:text-primary-light"
                   )}
                 >
                   {link.label}
@@ -76,7 +81,10 @@ export function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-lg p-2 text-foreground md:hidden"
+            className={cn(
+              "inline-flex items-center justify-center rounded-lg p-2 md:hidden",
+              onDark ? "text-white" : "text-foreground"
+            )}
             aria-label="Åbn menu"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

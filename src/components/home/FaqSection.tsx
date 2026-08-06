@@ -6,14 +6,14 @@ import { faqItems } from "@/lib/data";
 
 export function FaqSection() {
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-dark py-20 sm:py-28">
       <Container className="max-w-3xl">
         <AnimatedSection className="text-center">
-          <Badge>Spørgsmål</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <Badge invert>Spørgsmål</Badge>
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ofte stillede spørgsmål
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-white/60">
             De spørgsmål vi oftest får, besvaret med det samme.
           </p>
         </AnimatedSection>

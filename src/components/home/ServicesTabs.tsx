@@ -14,14 +14,14 @@ export function ServicesTabs() {
   const active = services.find((s) => s.id === activeId) ?? services[0];
 
   return (
-    <section id="services" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="services" className="scroll-mt-24 bg-dark py-20 sm:py-28">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
-          <Badge>Services</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <Badge invert>Services</Badge>
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Det vi kan hjælpe dig med
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-white/60">
             Vi bygger hjemmesider, onlinekurser og målrettede landingssider – og sørger
             for, at dine data og kontaktoplysninger fungerer korrekt på tværs af
             platforme.
@@ -40,12 +40,12 @@ export function ServicesTabs() {
                   className={cn(
                     "flex shrink-0 items-center gap-3 rounded-lg border px-4 py-3.5 text-left text-sm font-semibold transition-colors lg:shrink",
                     isActive
-                      ? "border-primary-light/30 bg-primary-light/[0.06] text-primary-light"
-                      : "border-transparent text-foreground/70 hover:bg-foreground/[0.03] hover:text-foreground"
+                      ? "border-primary-light/30 bg-primary-light/[0.08] text-primary-light"
+                      : "border-transparent text-white/60 hover:bg-white/[0.04] hover:text-white"
                   )}
                 >
                   <service.icon
-                    className={cn("h-5 w-5 shrink-0", isActive ? "text-primary-light" : "text-foreground/40")}
+                    className={cn("h-5 w-5 shrink-0", isActive ? "text-primary-light" : "text-white/30")}
                   />
                   {service.tab}
                 </button>

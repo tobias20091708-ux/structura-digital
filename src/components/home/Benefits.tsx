@@ -5,14 +5,14 @@ import { benefits } from "@/lib/data";
 
 export function Benefits() {
   return (
-    <section id="fordele" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="fordele" className="scroll-mt-24 bg-dark py-20 sm:py-28">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
-          <Badge>Om os</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <Badge invert>Om os</Badge>
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Derfor vælger virksomheder os
           </h2>
-          <p className="mt-4 text-lg text-muted">
+          <p className="mt-4 text-lg text-white/60">
             Vi er en dansk digital partner for virksomheder, der vil stå stærkere
             online — med personlig kontakt, gennemskuelige priser og løsninger, der er
             bygget til deres behov.

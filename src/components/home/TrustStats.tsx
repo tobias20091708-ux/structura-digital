@@ -4,7 +4,7 @@ import { trustStats } from "@/lib/data";
 
 export function TrustStats() {
   return (
-    <section className="bg-surface py-16 sm:py-20">
+    <section className="bg-dark py-16 sm:py-20">
       <Container>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
           {trustStats.map((item, i) => (
@@ -12,7 +12,7 @@ export function TrustStats() {
               <p className="text-3xl font-bold tracking-tight text-primary-light sm:text-4xl">
                 {item.stat}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-muted">{item.description}</p>
+              <p className="mt-3 text-sm leading-relaxed text-white/55">{item.description}</p>
             </AnimatedSection>
           ))}
         </div>
