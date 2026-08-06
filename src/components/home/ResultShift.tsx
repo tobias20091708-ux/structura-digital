@@ -33,13 +33,13 @@ export function ResultShift() {
 
           <AnimatedSection direction="right" delay={0.1} className="glow-border rounded-3xl">
             <div className="card h-full rounded-3xl p-8">
-              <span className="text-xs font-semibold tracking-wide text-accent uppercase">
+              <span className="text-xs font-semibold tracking-wide text-success uppercase">
                 Efter
               </span>
               <ul className="mt-5 space-y-4">
                 {resultShift.after.map((line) => (
                   <li key={line} className="flex items-start gap-3 text-foreground">
-                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                    <Check className="mt-0.5 h-4 w-4 shrink-0 text-success" />
                     <span>{line}</span>
                   </li>
                 ))}

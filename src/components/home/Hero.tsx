@@ -12,7 +12,7 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-20">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_55%_at_50%_-10%,rgba(181,80,44,0.12),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_55%_at_50%_-10%,rgba(30,64,175,0.12),transparent)]"
       />
 
       <Container className="relative">

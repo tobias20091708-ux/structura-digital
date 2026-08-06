@@ -18,7 +18,7 @@ export function SocialProof() {
         <div className="relative mt-16 grid grid-cols-1 gap-px overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/10 sm:grid-cols-3">
           {howItWorks.map((step, i) => (
             <AnimatedSection key={step.number} delay={i * 0.1} className="bg-background p-8">
-              <span className="font-serif text-4xl text-accent italic">{step.number}</span>
+              <span className="font-serif text-4xl text-primary italic">{step.number}</span>
               <h3 className="mt-4 text-lg font-semibold text-foreground">{step.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-foreground/50">{step.description}</p>
             </AnimatedSection>

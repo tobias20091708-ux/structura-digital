@@ -38,7 +38,7 @@ export default function KontaktPage() {
     <section className="relative overflow-hidden pt-40 pb-28">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(181,80,44,0.1),transparent)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(30,64,175,0.1),transparent)]"
       />
       <Container>
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[0.85fr_1.15fr]">
@@ -56,7 +56,7 @@ export default function KontaktPage() {
               <ul className="mt-10 space-y-5">
                 {infoItems.map((item) => (
                   <li key={item.label} className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/[0.03] text-accent">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/[0.03] text-primary">
                       <item.icon className="h-5 w-5" />
                     </span>
                     <div>
@@ -64,7 +64,7 @@ export default function KontaktPage() {
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="text-sm font-medium text-foreground hover:text-accent"
+                          className="text-sm font-medium text-foreground hover:text-primary"
                         >
                           {item.value}
                         </a>

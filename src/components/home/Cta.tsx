@@ -13,7 +13,7 @@ export function Cta() {
           <div className="card relative overflow-hidden rounded-[2.25rem] px-8 py-20 text-center sm:px-16">
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(181,80,44,0.12),transparent)]"
+              className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(30,64,175,0.12),transparent)]"
             />
             <h2 className="mx-auto max-w-2xl text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
               Dine konkurrenter stopper ikke med at{" "}

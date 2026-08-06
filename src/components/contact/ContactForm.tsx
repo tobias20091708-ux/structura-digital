@@ -14,7 +14,7 @@ const projectTypes = [
 ];
 
 const inputClasses =
-  "w-full rounded-2xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-accent/60 focus:bg-foreground/[0.05]";
+  "w-full rounded-2xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-primary/60 focus:bg-foreground/[0.05]";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -28,7 +28,7 @@ export function ContactForm() {
   if (status === "sent") {
     return (
       <div className="card flex flex-col items-center justify-center rounded-3xl px-8 py-20 text-center">
-        <CheckCircle2 className="h-12 w-12 text-accent" />
+        <CheckCircle2 className="h-12 w-12 text-success" />
         <h3 className="mt-5 text-2xl font-semibold text-foreground">Tak for din besked!</h3>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/55">
           Vi vender tilbage hurtigst muligt — svar inden 24 timer.
@@ -83,7 +83,7 @@ export function ContactForm() {
               key={type}
               className={cn(
                 "cursor-pointer rounded-full border border-foreground/10 bg-foreground/[0.03] px-4 py-2 text-xs font-medium text-foreground/60 transition-colors",
-                "has-[:checked]:border-accent/60 has-[:checked]:bg-accent/15 has-[:checked]:text-foreground"
+                "has-[:checked]:border-primary/60 has-[:checked]:bg-primary/10 has-[:checked]:text-foreground"
               )}
             >
               <input type="radio" name="project_type" value={type} className="sr-only" />

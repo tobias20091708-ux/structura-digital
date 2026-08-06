@@ -100,7 +100,7 @@ export function Footer() {
                   <li key={link.label + i}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/50 transition-colors hover:text-foreground"
+                      className="text-sm text-foreground/50 transition-colors hover:text-primary"
                     >
                       {link.label}
                     </Link>
@@ -114,14 +114,14 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-foreground">Kontakt</h4>
             <ul className="mt-4 space-y-3 text-sm text-foreground/50">
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-accent" />
-                <a href={`mailto:${contact.email}`} className="hover:text-foreground">
+                <Mail className="h-4 w-4 text-primary" />
+                <a href={`mailto:${contact.email}`} className="hover:text-primary">
                   {contact.email}
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-accent" />
-                <a href={contact.phoneHref} className="hover:text-foreground">
+                <Phone className="h-4 w-4 text-primary" />
+                <a href={contact.phoneHref} className="hover:text-primary">
                   {contact.phone}
                 </a>
               </li>

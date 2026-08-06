@@ -25,7 +25,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
               <span
                 className={cn(
                   "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-transform duration-300",
-                  open && "rotate-45 border-accent/50 text-accent"
+                  open && "rotate-45 border-primary/50 text-primary"
                 )}
               >
                 <Plus className="h-4 w-4" />

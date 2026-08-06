@@ -41,7 +41,7 @@ export function Navbar() {
           className={cn(
             "flex items-center justify-between rounded-2xl px-4 py-2.5 backdrop-blur-md transition-all duration-300",
             scrolled
-              ? "border border-foreground/10 bg-background/90 shadow-[0_8px_24px_-16px_rgba(42,33,24,0.3)]"
+              ? "border border-foreground/10 bg-background/90 shadow-[0_8px_24px_-16px_rgba(31,41,55,0.3)]"
               : "border border-transparent bg-transparent"
           )}
         >
@@ -58,13 +58,13 @@ export function Navbar() {
                   href={link.href}
                   className={cn(
                     "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                    active ? "text-foreground" : "text-foreground/60 hover:text-foreground"
+                    active ? "text-primary" : "text-foreground/60 hover:text-primary"
                   )}
                 >
                   {active && (
                     <motion.span
                       layoutId="nav-active"
-                      className="absolute inset-0 rounded-full bg-foreground/[0.08]"
+                      className="absolute inset-0 rounded-full bg-secondary-bg"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -110,8 +110,8 @@ export function Navbar() {
                   className={cn(
                     "rounded-xl px-4 py-3 text-base font-medium transition-colors",
                     pathname === link.href
-                      ? "bg-foreground/[0.08] text-foreground"
-                      : "text-foreground/70 hover:bg-foreground/[0.05] hover:text-foreground"
+                      ? "bg-secondary-bg text-primary"
+                      : "text-foreground/70 hover:bg-foreground/[0.05] hover:text-primary"
                   )}
                 >
                   {link.label}

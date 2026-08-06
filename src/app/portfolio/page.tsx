@@ -20,7 +20,7 @@ export default function PortfolioPage() {
       <section className="relative overflow-hidden pt-40 pb-20">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(181,80,44,0.1),transparent)]"
+          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(30,64,175,0.1),transparent)]"
         />
         <Container>
           <AnimatedSection className="mx-auto max-w-2xl text-center">
@@ -55,7 +55,7 @@ export default function PortfolioPage() {
             <div className="card relative overflow-hidden rounded-[2.25rem] px-8 py-16 text-center sm:px-16">
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(181,80,44,0.1),transparent)]"
+                className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(30,64,175,0.1),transparent)]"
               />
               <h2 className="mx-auto max-w-xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Kunne dit projekt være det <GradientText>næste eksempel</GradientText>?

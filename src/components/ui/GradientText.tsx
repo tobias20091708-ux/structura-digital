@@ -9,5 +9,5 @@ export function GradientText({
   className?: string;
   as?: "span" | "h1" | "h2" | "h3";
 }) {
-  return <Tag className={cn("font-serif text-accent italic", className)}>{children}</Tag>;
+  return <Tag className={cn("font-serif text-primary italic", className)}>{children}</Tag>;
 }

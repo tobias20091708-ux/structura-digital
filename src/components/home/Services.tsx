@@ -32,7 +32,7 @@ export function Services() {
                   <ul className="mt-6 space-y-2.5">
                     {service.points.map((point) => (
                       <li key={point} className="flex items-center gap-2.5 text-sm text-foreground/70">
-                        <Check className="h-4 w-4 shrink-0 text-accent" />
+                        <Check className="h-4 w-4 shrink-0 text-success" />
                         {point}
                       </li>
                     ))}

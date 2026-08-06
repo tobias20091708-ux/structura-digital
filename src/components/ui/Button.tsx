@@ -22,7 +22,7 @@ const sizes = {
 
 const variants = {
   primary:
-    "text-background bg-accent shadow-[0_1px_2px_rgba(42,33,24,0.08),0_10px_24px_-10px_rgba(181,80,44,0.55)] hover:bg-accent-strong hover:-translate-y-0.5",
+    "text-background bg-accent shadow-[0_1px_2px_rgba(31,41,55,0.08),0_10px_24px_-10px_rgba(234,88,12,0.55)] hover:bg-accent-strong hover:-translate-y-0.5",
   outline:
     "text-foreground border border-foreground/15 hover:border-foreground/30 bg-foreground/[0.02] hover:bg-foreground/[0.06] hover:-translate-y-0.5",
   ghost: "text-foreground/80 hover:text-foreground hover:bg-foreground/[0.06]",
