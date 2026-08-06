@@ -12,7 +12,7 @@ type ButtonProps = {
 };
 
 const base =
-  "group relative inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 disabled:opacity-50";
+  "group relative inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-light/60 disabled:opacity-50";
 
 const sizes = {
   sm: "px-4 py-2 text-sm",
@@ -22,7 +22,7 @@ const sizes = {
 
 const variants = {
   primary:
-    "text-background bg-accent shadow-[0_1px_2px_rgba(31,41,55,0.08),0_10px_24px_-10px_rgba(234,88,12,0.55)] hover:bg-accent-strong hover:-translate-y-0.5",
+    "text-white bg-accent shadow-[0_1px_2px_rgba(31,41,55,0.08),0_10px_24px_-10px_rgba(234,88,12,0.55)] hover:bg-accent-strong hover:-translate-y-0.5",
   outline:
     "text-foreground border border-foreground/15 hover:border-foreground/30 bg-foreground/[0.02] hover:bg-foreground/[0.06] hover:-translate-y-0.5",
   ghost: "text-foreground/80 hover:text-foreground hover:bg-foreground/[0.06]",
@@ -40,14 +40,24 @@ export function Button({
   const classes = cn(base, sizes[size], variants[variant], className);
 
   if (href) {
-    const isExternal = href.startsWith("http") || href.startsWith("mailto");
+    const isNewTab = href.startsWith("http");
+    const isProtocolLink = href.startsWith("mailto:") || href.startsWith("tel:");
+
+    if (isProtocolLink) {
+      return (
+        <a href={href} className={classes} onClick={onClick}>
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link
         href={href}
         className={classes}
         onClick={onClick}
-        target={isExternal ? "_blank" : undefined}
-        rel={isExternal ? "noopener noreferrer" : undefined}
+        target={isNewTab ? "_blank" : undefined}
+        rel={isNewTab ? "noopener noreferrer" : undefined}
       >
         {children}
       </Link>

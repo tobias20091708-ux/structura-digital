@@ -1,21 +1,21 @@
 import { Hero } from "@/components/home/Hero";
-import { PainPoints } from "@/components/home/PainPoints";
-import { Services } from "@/components/home/Services";
-import { SocialProof } from "@/components/home/SocialProof";
-import { ResultShift } from "@/components/home/ResultShift";
+import { TrustStats } from "@/components/home/TrustStats";
+import { ServicesTabs } from "@/components/home/ServicesTabs";
+import { Process } from "@/components/home/Process";
+import { Benefits } from "@/components/home/Benefits";
+import { CtaBanner } from "@/components/home/CtaBanner";
 import { FaqSection } from "@/components/home/FaqSection";
-import { Cta } from "@/components/home/Cta";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <PainPoints />
-      <Services />
-      <SocialProof />
-      <ResultShift />
+      <TrustStats />
+      <ServicesTabs />
+      <Process />
+      <Benefits />
+      <CtaBanner />
       <FaqSection />
-      <Cta />
     </>
   );
 }

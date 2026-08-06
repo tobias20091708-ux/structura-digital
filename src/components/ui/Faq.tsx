@@ -10,7 +10,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="divide-y divide-foreground/10 overflow-hidden rounded-3xl border border-foreground/10 card">
+    <div className="divide-y divide-foreground/10 overflow-hidden rounded-xl border border-foreground/10 card">
       {items.map((item, i) => {
         const open = openIndex === i;
         return (
@@ -25,7 +25,7 @@ export function Faq({ items }: { items: FaqItem[] }) {
               <span
                 className={cn(
                   "flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-transform duration-300",
-                  open && "rotate-45 border-primary/50 text-primary"
+                  open && "rotate-45 border-primary-light/50 text-primary-light"
                 )}
               >
                 <Plus className="h-4 w-4" />

@@ -1,32 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
+  --background: #ffffff;
+  --surface: #f8fafc;
+  --dark: #0f172a;
   --foreground: #1f2937;
-  --primary: #1e40af;
-  --primary-strong: #1e3a8a;
+  --muted: #6b7280;
+  --primary: #1e3a5f;
+  --primary-light: #2563eb;
   --accent: #ea580c;
   --accent-strong: #c2410c;
   --success: #059669;
   --success-strong: #047857;
   --card: #ffffff;
-  --secondary-bg: #eff6ff;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-dark: var(--dark);
   --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
   --color-primary: var(--primary);
-  --color-primary-strong: var(--primary-strong);
+  --color-primary-light: var(--primary-light);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
   --color-success: var(--success);
   --color-success-strong: var(--success-strong);
   --color-card: var(--card);
-  --color-secondary-bg: var(--secondary-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-fraunces);
 }
 
 * {
@@ -44,13 +47,15 @@ body {
 }
 
 h1,
-h2 {
-  font-family: var(--font-serif), Georgia, serif;
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 ::selection {
-  background: var(--primary);
-  color: var(--card);
+  background: var(--primary-light);
+  color: #ffffff;
 }
 
 /* Card surface */
@@ -73,8 +78,8 @@ h2 {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: var(--primary);
-  opacity: 0.3;
+  background: var(--primary-light);
+  opacity: 0.25;
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -85,13 +90,7 @@ h2 {
 }
 
 .glow-border:hover::before {
-  opacity: 0.55;
-}
-
-/* Paper grain overlay */
-.noise {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
-  background-size: 160px 160px;
+  opacity: 0.5;
 }
 
 @media (prefers-reduced-motion: reduce) {

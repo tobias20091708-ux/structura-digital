@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { ctaText } from "@/lib/data";
 
 const links = [
-  { href: "/", label: "Forside" },
-  { href: "/portfolio", label: "Portfolio" },
-  { href: "/priser", label: "Priser" },
+  { href: "/#services", label: "Services" },
+  { href: "/#fordele", label: "Om os" },
+  { href: "/portfolio", label: "Cases" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -39,9 +39,9 @@ export function Navbar() {
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         <div
           className={cn(
-            "flex items-center justify-between rounded-2xl px-4 py-2.5 backdrop-blur-md transition-all duration-300",
+            "flex items-center justify-between rounded-xl px-4 py-2.5 backdrop-blur-md transition-all duration-300",
             scrolled
-              ? "border border-foreground/10 bg-background/90 shadow-[0_8px_24px_-16px_rgba(31,41,55,0.3)]"
+              ? "border border-foreground/10 bg-background/90 shadow-[0_8px_24px_-16px_rgba(31,41,55,0.25)]"
               : "border border-transparent bg-transparent"
           )}
         >
@@ -57,18 +57,11 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative rounded-full px-4 py-2 text-sm font-medium transition-colors",
-                    active ? "text-primary" : "text-foreground/60 hover:text-primary"
+                    "relative rounded-lg px-4 py-2 text-sm font-medium transition-colors",
+                    active ? "text-primary-light" : "text-foreground/70 hover:text-primary-light"
                   )}
                 >
-                  {active && (
-                    <motion.span
-                      layoutId="nav-active"
-                      className="absolute inset-0 rounded-full bg-secondary-bg"
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative">{link.label}</span>
+                  {link.label}
                 </Link>
               );
             })}
@@ -77,14 +70,13 @@ export function Navbar() {
           <div className="hidden md:block">
             <Button href="/kontakt" size="sm">
               {ctaText}
-              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Button>
           </div>
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex items-center justify-center rounded-full p-2 text-foreground md:hidden"
+            className="inline-flex items-center justify-center rounded-lg p-2 text-foreground md:hidden"
             aria-label="Åbn menu"
           >
             {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -99,7 +91,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="mx-6 mt-2 rounded-2xl border border-foreground/10 bg-background/95 p-4 backdrop-blur-md md:hidden"
+            className="mx-6 mt-2 rounded-xl border border-foreground/10 bg-background/95 p-4 backdrop-blur-md md:hidden"
           >
             <nav className="flex flex-col gap-1">
               {links.map((link) => (
@@ -108,10 +100,10 @@ export function Navbar() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "rounded-xl px-4 py-3 text-base font-medium transition-colors",
+                    "rounded-lg px-4 py-3 text-base font-medium transition-colors",
                     pathname === link.href
-                      ? "bg-secondary-bg text-primary"
-                      : "text-foreground/70 hover:bg-foreground/[0.05] hover:text-primary"
+                      ? "bg-primary-light/[0.07] text-primary-light"
+                      : "text-foreground/70 hover:bg-foreground/[0.05] hover:text-primary-light"
                   )}
                 >
                   {link.label}

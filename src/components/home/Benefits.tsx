@@ -1,0 +1,35 @@
+import { Container } from "@/components/ui/Container";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { Badge } from "@/components/ui/Badge";
+import { benefits } from "@/lib/data";
+
+export function Benefits() {
+  return (
+    <section id="fordele" className="scroll-mt-24 py-20 sm:py-28">
+      <Container>
+        <AnimatedSection className="mx-auto max-w-2xl text-center">
+          <Badge>Om os</Badge>
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Derfor vælger små virksomheder os
+          </h2>
+          <p className="mt-4 text-lg text-muted">
+            Vi er en dansk digitalpartner for virksomheder der vil findes online — uden
+            bureaukrati og uden bureau-priser.
+          </p>
+        </AnimatedSection>
+
+        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {benefits.map((benefit, i) => (
+            <AnimatedSection key={benefit.title} delay={i * 0.08} className="card rounded-xl p-6">
+              <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent/[0.08] text-accent">
+                <benefit.icon className="h-5 w-5" />
+              </span>
+              <h3 className="mt-4 text-base font-bold text-foreground">{benefit.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted">{benefit.description}</p>
+            </AnimatedSection>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}

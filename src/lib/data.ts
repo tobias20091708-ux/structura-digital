@@ -1,3 +1,20 @@
+import {
+  Globe,
+  GraduationCap,
+  Target,
+  Wrench,
+  MessageCircle,
+  FileText,
+  Palette,
+  Code2,
+  Rocket,
+  UserCheck,
+  Wallet,
+  Headset,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+
 export const contact = {
   email: "kontakt@webløsning.dk",
   phone: "30 13 73 28",
@@ -5,166 +22,178 @@ export const contact = {
   priceLine: "Starter fra 985 kr — ring for et tilbud på tlf. 30 13 73 28",
 };
 
-export const ctaText = "Få et gratis tilbud";
+export const ctaText = "Få et tilbud";
+
+export type TrustStat = {
+  stat: string;
+  description: string;
+};
+
+export const trustStats: TrustStat[] = [
+  {
+    stat: "Fra 985 kr",
+    description: "Professionelle hjemmesider til priser små virksomheder har råd til.",
+  },
+  {
+    stat: "100% dansk",
+    description: "Personlig kontakt, dansk support og lokal forståelse for dit marked.",
+  },
+  {
+    stat: "Hurtig levering",
+    description: "Din nye hjemmeside klar på 1-2 uger — ikke måneder.",
+  },
+];
 
 export type Service = {
-  title: string;
-  description: string;
+  id: string;
+  tab: string;
+  icon: LucideIcon;
+  heading: string;
+  text: string;
   points: string[];
-  result: string;
 };
 
 export const services: Service[] = [
   {
-    title: "Hjemmesider",
-    description:
-      "Moderne, hurtige hjemmesider der konverterer besøgende til kunder.",
+    id: "hjemmesider",
+    tab: "Hjemmesider",
+    icon: Globe,
+    heading: "Hjemmesider der konverterer",
+    text: "Vi designer og bygger moderne hjemmesider der er hurtige, mobilvenlige og optimeret til Google. Du får en side der gør besøgende til kunder.",
     points: [
-      "Mobiloptimeret på alle skærme",
-      "SEO-klar fra dag ét",
-      "Hurtig loadtid",
-      "Bookingsystem eller kontaktformular",
+      "Responsivt design til alle enheder",
+      "SEO-optimeret fra start",
+      "Hurtig loadtid og moderne teknologi",
     ],
-    result: "Ikke bare en flot side — en side der arbejder for dig 24/7.",
   },
   {
-    title: "Online kurser & kursusplatforme",
-    description: "Strukturering og opsætning af online læringsplatforme.",
-    points: [
-      "Kursusstruktur der giver mening",
-      "Betalingsløsning",
-      "Medlemsadgang",
-      "Videohosting",
-    ],
-    result: "Gør din viden til en indtægtskilde der kører mens du sover.",
+    id: "kurser",
+    tab: "Online kurser",
+    icon: GraduationCap,
+    heading: "Kursusplatforme der sælger",
+    text: "Få din egen kursusplatform hvor du kan sælge og levere online kurser. Vi bygger alt fra login til betaling.",
+    points: ["Medlemssystem med login", "Betalingsintegration", "Videohosting og modulstruktur"],
   },
   {
-    title: "Lead Pages",
-    description:
-      "Landingssider designet til ét formål: at fange leads og konvertere besøgende.",
+    id: "leadpages",
+    tab: "Lead pages",
+    icon: Target,
+    heading: "Lead pages der fanger",
+    text: "Landingssider designet til én ting: at få besøgende til at handle. Perfekt til kampagner, launches og leadgenerering.",
     points: [
-      "Optimeret til annoncer og kampagner",
-      "Bygget til målrettet trafik",
-      "Klar handling, ingen distraktioner",
+      "Konverteringsoptimeret design",
+      "A/B test-venligt setup",
+      "Integration med email-marketing",
     ],
-    result: "En side der gør klik til kunder.",
   },
   {
-    title: "Data Checking / Reparation",
-    description:
-      "Gennemgang af din eksisterende hjemmeside eller system: virker alt som det skal? Er det sikkert?",
+    id: "datacheck",
+    tab: "Data checking",
+    icon: Wrench,
+    heading: "Data checking og reparation",
+    text: "Vi tjekker og reparerer din virksomheds data — fra hjemmesidefejl til kontaktoplysninger på tværs af platforme.",
     points: [
-      "Tjek af performance",
-      "Sikkerhedsgennemgang",
-      "Links og formularer",
-      "Integrationer",
+      "Teknisk SEO-audit",
+      "Fejlrettelse og optimering",
+      "Data-konsistens på tværs af platforme",
     ],
-    result: "Vær sikker på at din digitale forretning kører fejlfrit og sikkert.",
   },
-];
-
-export const painPoints: string[] = [
-  "Dine konkurrenter dukker op på Google — gør du?",
-  "Kunder tjekker din hjemmeside inden de ringer. Hvad ser de?",
-  "Du ved dit håndværk er godt — men din online tilstedeværelse viser det ikke.",
 ];
 
 export type ProcessStep = {
   number: string;
+  icon: LucideIcon;
   title: string;
   description: string;
 };
 
-export const howItWorks: ProcessStep[] = [
+export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "Vi snakker om din forretning",
-    description:
-      "En uforpligtende samtale om hvad du har brug for, og hvad der reelt vil rykke.",
+    icon: MessageCircle,
+    title: "Samtale",
+    description: "Vi starter med en uforpligtende snak om dine behov og mål.",
   },
   {
     number: "02",
-    title: "Vi bygger din løsning",
-    description:
-      "Du får løbende indblik, mens vi bygger den løsning der passer til dit budget og behov.",
+    icon: FileText,
+    title: "Forslag",
+    description: "Du modtager et konkret forslag med pris, tidsplan og indhold.",
   },
   {
     number: "03",
-    title: "Du får flere kunder",
-    description:
-      "Din løsning går live, og du bliver fundet, valgt og kontaktet — også mens du sover.",
+    icon: Palette,
+    title: "Design",
+    description: "Vi designer din side med fokus på dit brand og din målgruppe.",
+  },
+  {
+    number: "04",
+    icon: Code2,
+    title: "Udvikling",
+    description: "Vi bygger siden i moderne teknologi — hurtigt og skalerbart.",
+  },
+  {
+    number: "05",
+    icon: Rocket,
+    title: "Lancering",
+    description: "Vi tester alt, sætter live, og sikrer alt kører perfekt.",
   },
 ];
 
-export const trustBadges: string[] = [
-  "Svar inden 24 timer",
-  "Ingen skjulte gebyrer",
-  "Dansk support",
-];
-
-export type Testimonial = {
-  quote: string;
-  name: string;
-  company: string;
+export type Benefit = {
+  icon: LucideIcon;
+  title: string;
+  description: string;
 };
 
-export const testimonials: Testimonial[] = [
+export const benefits: Benefit[] = [
   {
-    quote: "[TESTIMONIAL_TEKST]",
-    name: "[KUNDENAVN]",
-    company: "[VIRKSOMHED]",
+    icon: UserCheck,
+    title: "Personlig kontakt",
+    description: "Du taler direkte med den der bygger din side — ingen mellemled.",
   },
   {
-    quote: "[TESTIMONIAL_TEKST]",
-    name: "[KUNDENAVN]",
-    company: "[VIRKSOMHED]",
+    icon: Wallet,
+    title: "Faste priser",
+    description: "Du ved hvad det koster fra start. Ingen skjulte gebyrer.",
   },
   {
-    quote: "[TESTIMONIAL_TEKST]",
-    name: "[KUNDENAVN]",
-    company: "[VIRKSOMHED]",
+    icon: Headset,
+    title: "Dansk support",
+    description: "Hjælp når du har brug for det — på dansk, til danske virksomheder.",
+  },
+  {
+    icon: Zap,
+    title: "Moderne teknologi",
+    description: "Hurtige sider bygget i Next.js — ikke tunge WordPress-templates.",
   },
 ];
-
-export const resultShift = {
-  before: [
-    "Ingen hjemmeside",
-    "Usynlig på Google",
-    "Kunder ringer til konkurrenten",
-  ],
-  after: [
-    "Professionel online tilstedeværelse",
-    "Synlig i søgeresultater",
-    "Kunder der finder dig selv",
-  ],
-};
 
 export type FaqItem = { question: string; answer: string };
 
 export const faqItems: FaqItem[] = [
   {
+    question: "Hvad koster en hjemmeside?",
+    answer:
+      "Vores hjemmesider starter fra 985 kr. Den endelige pris afhænger af dine behov — ring til os for et uforpligtende tilbud.",
+  },
+  {
     question: "Hvor lang tid tager det?",
-    answer: "Typisk 1-2 uger for en standardside — du får en konkret tidsplan, før vi går i gang.",
+    answer: "De fleste hjemmesider er klar inden for 1-2 uger.",
   },
   {
-    question: "Hvad hvis jeg ikke er teknisk?",
-    answer: "Det behøver du heller ikke være. Vi klarer alt det tekniske, så du kan fokusere på din forretning.",
+    question: "Kan jeg selv redigere min side?",
+    answer:
+      "Ja, vi sætter dig op med et brugervenligt system så du selv kan opdatere tekst og billeder.",
   },
   {
-    question: "Kan jeg redigere siden selv bagefter?",
-    answer: "Ja, vi sørger for det er nemt at opdatere tekster og indhold selv, når du har brug for det.",
+    question: "Hvad med hosting og domæne?",
+    answer: "Vi hjælper med alt det tekniske — hosting, domæne og email.",
   },
   {
-    question: "Hvad koster det?",
-    answer: `${contact.priceLine}.`,
-  },
-  {
-    question: "Hvad med vedligeholdelse?",
-    answer: "Vi tilbyder løbende support, så din løsning bliver ved med at virke fejlfrit.",
-  },
-  {
-    question: "Hvad hvis jeg ikke er tilfreds?",
-    answer: "Vi arbejder sammen indtil du er tilfreds med resultatet.",
+    question: "Laver I også webshops?",
+    answer:
+      "Vi fokuserer på hjemmesider, kurser og lead pages. Kontakt os hvis du har et webshop-behov, så finder vi en løsning.",
   },
 ];
 
