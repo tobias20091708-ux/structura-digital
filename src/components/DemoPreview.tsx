@@ -3,16 +3,18 @@ import { cn } from "@/lib/cn";
 export function DemoPreview({
   title,
   src,
+  size = "default",
   className,
 }: {
   title: string;
   src: string;
+  size?: "default" | "large";
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_24px_64px_-40px_rgba(15,23,42,0.4)]",
+        "overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_24px_64px_-40px_rgba(23,19,16,0.5)]",
         className
       )}
     >
@@ -30,7 +32,10 @@ export function DemoPreview({
         src={src}
         title={title}
         loading="lazy"
-        className="h-[350px] w-full bg-white sm:h-[500px]"
+        className={cn(
+          "w-full bg-white",
+          size === "large" ? "h-[420px] sm:h-[600px] lg:h-[700px]" : "h-[350px] sm:h-[500px]"
+        )}
       />
     </div>
   );

@@ -1,46 +1,70 @@
 import type { Metadata } from "next";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { GradientText } from "@/components/ui/GradientText";
-import { BrowserMockupCard } from "@/components/portfolio/BrowserMockupCard";
-import { portfolioItems, ctaText } from "@/lib/data";
+import { DemoPreview } from "@/components/DemoPreview";
+import { demoSites, ctaText } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Structura Digital",
+  title: "Cases — Structura Digital",
   description:
-    "Se eksempler på hjemmesider, webshops og kursusplatforme Structura Digital kan bygge til din branche.",
+    "Se interaktive eksempler på hjemmesider bygget af Structura Digital — prøv dem selv, direkte i browseren.",
 };
 
 export default function PortfolioPage() {
   return (
-    <>
-      <section className="relative overflow-hidden pt-40 pb-20">
+    <div className="bg-dark">
+      <section className="relative overflow-hidden pt-40 pb-16">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(30,64,175,0.1),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(228,87,46,0.13),transparent)]"
         />
         <Container>
           <AnimatedSection className="mx-auto max-w-2xl text-center">
-            <Badge>Portfolio</Badge>
-            <h1 className="mt-6 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl">
-              Eksempler på <GradientText>digitalt håndværk</GradientText>
+            <Badge invert>Cases</Badge>
+            <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Digitalt håndværk du kan prøve
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-foreground/55">
-              Tre store landing pages — designet til at vise, hvordan en skarp digital førstehåndsoplevelse kan føles.
+            <p className="mt-6 text-lg leading-relaxed text-white/60">
+              Ingen skærmbilleder — hver case er en rigtig hjemmeside, du kan
+              scrolle og klikke rundt i, direkte her på siden.
             </p>
           </AnimatedSection>
         </Container>
       </section>
 
-      <section className="pb-28">
+      <section className="pb-24">
         <Container>
-          <div className="space-y-10">
-            {portfolioItems.map((item, i) => (
-              <AnimatedSection key={item.slug} delay={i * 0.08}>
-                <BrowserMockupCard item={item} />
+          <div className="space-y-20">
+            {demoSites.map((demo, i) => (
+              <AnimatedSection key={demo.slug} delay={i * 0.08}>
+                <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-bold tracking-[0.2em] text-accent uppercase">
+                      {demo.category}
+                    </p>
+                    <h2 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+                      {demo.name}
+                    </h2>
+                    <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/55 sm:text-base">
+                      {demo.description}
+                    </p>
+                  </div>
+                  <ul className="flex flex-col gap-2">
+                    {demo.points.map((point) => (
+                      <li
+                        key={point}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-white/60"
+                      >
+                        <Check className="h-4 w-4 shrink-0 text-success" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <DemoPreview title={demo.url} src={demo.src} size="large" />
               </AnimatedSection>
             ))}
           </div>
@@ -49,24 +73,25 @@ export default function PortfolioPage() {
 
       <section className="pb-28">
         <Container>
-          <AnimatedSection className="glow-border relative overflow-hidden rounded-2xl p-2">
-            <div className="card relative overflow-hidden rounded-xl px-8 py-16 text-center sm:px-16">
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(30,64,175,0.1),transparent)]"
-              />
-              <h2 className="mx-auto max-w-xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                Kunne dit projekt være det <GradientText>næste eksempel</GradientText>?
+          <AnimatedSection className="grain relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-primary via-[#16302a] to-dark px-8 py-16 text-center sm:px-16">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(228,87,46,0.18),transparent)]"
+            />
+            <div className="relative">
+              <h2 className="mx-auto max-w-xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Kunne dit projekt være det næste eksempel?
               </h2>
-              <p className="mx-auto mt-4 max-w-lg text-foreground/55">
-                Fortæl os om din idé, og få et konkret forslag til struktur og design.
+              <p className="mx-auto mt-4 max-w-lg text-white/60">
+                Fortæl os om din idé, og få et konkret forslag til struktur og
+                design — uforpligtende.
               </p>
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <Button href="/kontakt" size="lg">
                   {ctaText}
                   <ArrowUpRight className="h-4 w-4" />
                 </Button>
-                <Button href="/priser" variant="outline" size="lg">
+                <Button href="/priser" variant="outlineOnDark" size="lg">
                   Se priser
                 </Button>
               </div>
@@ -74,6 +99,6 @@ export default function PortfolioPage() {
           </AnimatedSection>
         </Container>
       </section>
-    </>
+    </div>
   );
 }

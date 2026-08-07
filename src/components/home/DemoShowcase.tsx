@@ -1,8 +1,10 @@
-import { Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { DemoPreview } from "@/components/DemoPreview";
+import { demoSites } from "@/lib/data";
 
 export function DemoShowcase() {
   return (
@@ -20,30 +22,23 @@ export function DemoShowcase() {
         </AnimatedSection>
 
         <div className="mx-auto mt-14 grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-2">
-          <AnimatedSection delay={0.1}>
-            <DemoPreview title="www.holmogson.dk" src="/demos/tomrer.html" />
-          </AnimatedSection>
-          <AnimatedSection delay={0.2}>
-            <ComingSoonPreview />
-          </AnimatedSection>
+          {demoSites.map((demo, i) => (
+            <AnimatedSection key={demo.slug} delay={0.1 + i * 0.1}>
+              <DemoPreview title={demo.url} src={demo.src} />
+              <p className="mt-4 text-center text-sm text-white/45">
+                {demo.name} — {demo.category}
+              </p>
+            </AnimatedSection>
+          ))}
         </div>
+
+        <AnimatedSection delay={0.25} className="mt-12 text-center">
+          <Button href="/portfolio" variant="outlineOnDark">
+            Se alle cases
+            <ArrowRight className="h-4 w-4" />
+          </Button>
+        </AnimatedSection>
       </Container>
     </section>
-  );
-}
-
-function ComingSoonPreview() {
-  return (
-    <div className="flex h-full min-h-[350px] flex-col items-center justify-center gap-4 overflow-hidden rounded-2xl border border-white/15 bg-white/[0.03] px-6 text-center sm:min-h-[500px]">
-      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/[0.06]">
-        <Sparkles className="h-6 w-6 text-white/60" />
-      </span>
-      <div>
-        <p className="text-sm font-semibold text-white">Endnu et eksempel på vej</p>
-        <p className="mt-1 text-xs text-white/50">
-          Vi tilføjer snart flere interaktive demoer her
-        </p>
-      </div>
-    </div>
   );
 }

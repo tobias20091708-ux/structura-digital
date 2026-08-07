@@ -104,44 +104,6 @@ h3 {
   opacity: 0.5;
 }
 
-/* Full-size case studies */
-.case-showcase { overflow: hidden; border: 1px solid rgba(31, 41, 55, .1); border-radius: 1rem; background: #fff; box-shadow: 0 24px 64px -40px rgba(15, 23, 42, .4); }
-.case-label { display: flex; justify-content: space-between; padding: .9rem 1.25rem; color: var(--foreground); font-size: .7rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
-.case-label span:last-child { color: var(--muted); font-weight: 500; }
-.case-browser { overflow: hidden; border-top: 1px solid rgba(31, 41, 55, .1); background: #f8fafc; }
-.case-browser-bar { display: flex; align-items: center; gap: .35rem; height: 2.25rem; padding: 0 1rem; background: #fff; border-bottom: 1px solid rgba(31, 41, 55, .08); }
-.case-browser-bar i { display: block; width: .48rem; height: .48rem; border-radius: 99px; background: #d9dee7; }
-.case-browser-bar div { width: 30%; max-width: 15rem; height: .75rem; margin-left: .55rem; border-radius: 99px; background: #eef0f4; }
-.case-site { position: relative; min-height: clamp(29rem, 58vw, 49rem); overflow: hidden; font-family: Arial, Helvetica, sans-serif; isolation: isolate; }
-.case-site .case-nav { display: flex; position: relative; z-index: 2; align-items: center; justify-content: space-between; padding: clamp(1.25rem, 2.6vw, 2.5rem) clamp(1.25rem, 4vw, 4.5rem); font-size: clamp(.65rem, 1.15vw, .88rem); }
-.case-wordmark { font-size: 1.05em; font-weight: 800; letter-spacing: .18em; }
-.case-nav-links { display: flex; gap: clamp(.75rem, 2.5vw, 2.75rem); font-size: .85em; }
-.case-menu { display: none; width: 1.25rem; }
-.case-site h3 { margin: .35rem 0 1rem; font-size: clamp(2.4rem, 5.3vw, 5.75rem); font-weight: 600; line-height: .93; letter-spacing: -.07em; }
-.case-kicker { margin: 0; font-size: clamp(.62rem, 1vw, .82rem); font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
-.case-lead { max-width: 23rem; margin: 0; font-size: clamp(.84rem, 1.35vw, 1.15rem); line-height: 1.5; }
-.case-button, .case-mini-button { display: inline-flex; align-items: center; gap: .8rem; border: 0; font: inherit; cursor: pointer; }
-.case-button svg, .case-text-button svg { width: 1em; height: 1em; }
-
-.case-estate { color: #183d40; background: #eff2e7; }
-.case-estate .case-nav { border-bottom: 1px solid rgba(24, 61, 64, .14); }
-.case-estate-grid { display: grid; grid-template-columns: 1.02fr .98fr; min-height: calc(clamp(29rem, 58vw, 49rem) - 5.5rem); }
-.case-estate-copy { align-self: center; padding: 7% 10% 12%; }
-.case-estate .case-lead { color: #557072; }
-.case-estate .case-button { margin-top: clamp(1.5rem, 3vw, 3rem); padding: .85em 1.2em; color: #f4f3ea; background: #183d40; border-radius: 10px; font-weight: 700; }
-.case-proof { display: flex; flex-wrap: wrap; gap: .65rem; align-items: center; margin-top: clamp(1.5rem, 3vw, 3.25rem); font-size: clamp(.62rem, .9vw, .78rem); }
-.case-proof span:first-child { font-size: 1.35em; font-weight: 700; }.case-proof span:nth-child(2) { color: #c78e40; letter-spacing: .1em; }
-.case-house { position: relative; min-height: 100%; overflow: hidden; background: linear-gradient(145deg, #b9d9d2 0%, #d9e2c9 100%); }
-.case-house::after { content: ""; position: absolute; z-index: 1; right: -10%; bottom: -6%; left: -10%; height: 37%; background: #91b085; border-radius: 50% 50% 0 0 / 30% 30% 0 0; }
-.case-sun { position: absolute; top: 12%; right: 15%; width: 15%; aspect-ratio: 1; border-radius: 50%; background: #f7c678; }.case-cloud { position: absolute; width: 28%; height: 7%; border-radius: 99px; background: rgba(255,255,255,.65); }.case-cloud::after { content:""; position:absolute; width:45%; aspect-ratio:1; left:22%; bottom:0; border-radius:50%; background:inherit; }.case-cloud-one{top:20%;left:12%}.case-cloud-two{top:36%;right:7%; transform:scale(.65)}
-.case-home { position: absolute; z-index: 2; right: 12%; bottom: 20%; width: 62%; height: 43%; }.case-roof { position: absolute; top: 0; left: 0; width: 100%; height: 50%; background: #355b5a; clip-path: polygon(50% 0, 100% 80%, 100% 100%, 0 100%, 0 80%); }.case-wall { display: flex; position: absolute; right: 13%; bottom: 0; width: 74%; height: 60%; justify-content: flex-end; gap: 11%; padding: 12% 10%; background: #f3ece0; }.case-wall i { display: block; width: 17%; height: 36%; background: #73949a; }.case-bush { position:absolute; z-index:3; bottom:12%; width:24%; aspect-ratio:1; border-radius:50%; background:#52795c; }.case-bush-one{left:8%}.case-bush-two{right:1%;transform:scale(.7)}
-
-.case-clinic { color: #273226; background: #f7f4ed; }.case-clinic .case-nav { border-bottom: 1px solid #dedbd2; }.case-mini-button { padding: .65em 1em; color: #f8f6ee; background: #384937; border-radius: 10px; }.case-clinic-hero { display: grid; grid-template-columns: 1fr 1fr; align-items: center; min-height: calc(clamp(29rem, 58vw, 49rem) - 5.5rem); }.case-clinic-art { position: relative; height: 100%; min-height: 24rem; overflow: hidden; background: #b7c8ad; }.case-arch { position: absolute; bottom: -16%; left: 19%; width: 63%; height: 75%; background: #efede2; border-radius: 55% 55% 0 0; }.case-arch-small { position: absolute; right: 4%; bottom: -11%; width: 45%; height: 43%; background: #82977c; border-radius: 50% 50% 0 0; }.case-leaf { position: absolute; z-index: 2; width: 8%; aspect-ratio: 1 / 2.8; border-radius: 100% 0 100% 0; background: #3e6240; transform-origin: bottom; }.case-leaf-one{right:27%;bottom:26%;transform:rotate(23deg)}.case-leaf-two{right:18%;bottom:21%;transform:rotate(70deg) scale(.8)}.case-clinic-copy { padding: 10%; }.case-clinic .case-lead { color: #657361; }.case-text-button { display:inline-flex; gap:.7em; align-items:center; margin-top:clamp(1.5rem, 3vw, 3rem); padding:0; color:#273226; border:0; border-bottom:1px solid #273226; background:none; font:inherit; font-weight:700; }.case-clinic-footer { display:flex; justify-content:space-between; padding:1rem clamp(1.25rem, 4vw, 4.5rem); border-top:1px solid #dedbd2; color:#73816e; font-size:clamp(.62rem, .95vw, .76rem); text-transform:uppercase; letter-spacing:.12em; }
-
-.case-craft { color:#f8f3e8; background:#1d252a; }.case-craft .case-nav { color:#f8f3e8; border-bottom:1px solid rgba(248,243,232,.18); }.case-phone { padding:.6em .9em; border:1px solid rgba(248,243,232,.35); border-radius:10px; font-size:.8em; }.case-craft-hero { display:grid; grid-template-columns:1.1fr .9fr; min-height:calc(clamp(29rem, 58vw, 49rem) - 9rem); }.case-craft-copy { align-self:center; padding:10%; }.case-craft .case-kicker{color:#d9a85e}.case-craft .case-button{margin-top:clamp(1.5rem, 3vw, 3rem);padding:.85em 1.2em;color:#1d252a;background:#e6ad5a;border-radius:10px;font-weight:700}.case-craft-art{position:relative;min-height:24rem;overflow:hidden;background:#c0864e}.case-plank{position:absolute;width:120%;height:19%;left:-10%;background:linear-gradient(110deg,#dcad69 0 18%,#bb7b43 18% 30%,#e2b16d 30% 65%,#b9713f 65% 78%,#d69a58 78%);transform:rotate(-28deg);box-shadow:0 8px 0 rgba(72,43,24,.1)}.case-plank-a{top:-2%}.case-plank-b{top:25%}.case-plank-c{top:52%}.case-plank-d{top:79%}.case-craft-stats{display:flex;justify-content:space-between;gap:1rem;padding:1.2rem clamp(1.25rem,4vw,4.5rem);border-top:1px solid rgba(248,243,232,.18);color:#d5d5cf;font-size:clamp(.62rem,.95vw,.8rem)}.case-craft-stats span{display:flex;align-items:center;gap:.45rem}.case-craft-stats svg{width:1em;color:#e6ad5a}
-
-@media (max-width: 640px) { .case-site .case-nav { padding: 1.1rem 1.25rem; }.case-nav-links { display: none; }.case-menu { display: block; }.case-estate-grid, .case-clinic-hero, .case-craft-hero { grid-template-columns: 1fr; }.case-estate-copy, .case-clinic-copy, .case-craft-copy { padding: 3.5rem 1.5rem; }.case-house, .case-clinic-art, .case-craft-art { min-height: 19rem; }.case-estate .case-house { order: -1; }.case-clinic-art { min-height: 18rem; }.case-craft-art { min-height: 15rem; }.case-craft-stats { flex-wrap: wrap; }.case-phone { display: none; }.case-site h3 { font-size: clamp(2.45rem, 12vw, 4rem); }.case-site { min-height: 0; }.case-clinic-footer { padding: 1rem 1.25rem; } }
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

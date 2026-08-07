@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NORDVIG KLINIK — Fysioterapi Aarhus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --linen:#F6F3EC;
+    --bone:#FDFBF7;
+    --ink:#1E2B26;
+    --pine:#2F4A3E;
+    --sage:#8FAE9B;
+    --clay:#C97B5A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--linen);
+    color:var(--ink);
+    overflow-x:hidden;
+  }
+
+  /* ============ NAV ============ */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:1.4rem 4vw;
+    background:linear-gradient(to bottom, rgba(246,243,236,.92), transparent);
+    backdrop-filter:blur(2px);
+  }
+  .logo{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;font-size:1.1rem;letter-spacing:.12em;
+    color:var(--ink);text-decoration:none;
+  }
+  .logo span{color:var(--clay)}
+  .nav-links{display:flex;gap:2.2rem;align-items:center}
+  .nav-links a{
+    color:var(--ink);text-decoration:none;font-size:.85rem;font-weight:500;
+    letter-spacing:.04em;opacity:.8;transition:opacity .2s;
+  }
+  .nav-links a:hover{opacity:1}
+  .nav-cta{
+    background:var(--pine);color:var(--bone)!important;opacity:1!important;
+    padding:.6rem 1.3rem;border-radius:999px;font-weight:600;
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;min-height:100vh;
+    display:grid;grid-template-columns:1.05fr .95fr;align-items:center;
+    padding:7rem 4vw 4rem;gap:3rem;
+  }
+  .hero-eyebrow{
+    font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--clay);font-weight:600;margin-bottom:1.2rem;
+    opacity:0;animation:rise .8s .2s forwards;
+  }
+  .hero h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-size:clamp(2.9rem, 7.2vw, 6.2rem);
+    line-height:.96;
+    letter-spacing:-.02em;
+    max-width:12ch;
+    opacity:0;animation:rise .8s .35s forwards;
+  }
+  .hero h1 em{
+    font-style:normal;color:var(--pine);
+    background:linear-gradient(100deg, var(--pine), var(--sage));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-sub{
+    max-width:38ch;font-size:1.05rem;line-height:1.65;color:rgba(30,43,38,.75);
+    margin-top:1.6rem;opacity:0;animation:rise .8s .5s forwards;
+  }
+  .hero-actions{
+    display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.4rem;
+    opacity:0;animation:rise .8s .62s forwards;
+  }
+  .cta{
+    display:inline-flex;align-items:center;gap:.7rem;
+    background:var(--pine);color:var(--bone);
+    font-weight:600;font-size:1rem;text-decoration:none;
+    padding:1.05rem 1.9rem;border-radius:999px;
+    transition:transform .25s, box-shadow .25s;
+    box-shadow:0 10px 34px rgba(47,74,62,.28);
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(47,74,62,.38)}
+  .cta-ghost{
+    display:inline-flex;align-items:center;gap:.6rem;
+    color:var(--ink);text-decoration:none;font-weight:600;
+    padding:1.05rem 1.4rem;border-radius:999px;border:1px solid rgba(30,43,38,.25);
+    transition:border-color .2s, background .2s;
+  }
+  .cta-ghost:hover{border-color:var(--pine);background:rgba(47,74,62,.05)}
+  .hero-art{
+    position:relative;height:min(74vh,40rem);border-radius:2rem 2rem 12rem 2rem;overflow:hidden;
+    background:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1400&q=80') center/cover no-repeat;
+    box-shadow:0 30px 80px -30px rgba(30,43,38,.4);
+    opacity:0;animation:rise .9s .4s forwards;
+  }
+  .hero-card{
+    position:absolute;left:1.4rem;bottom:1.4rem;right:1.4rem;
+    background:rgba(253,251,247,.92);backdrop-filter:blur(6px);
+    border-radius:1.2rem;padding:1.1rem 1.4rem;
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  }
+  .hero-card strong{font-family:'Bricolage Grotesque',sans-serif;font-size:1.05rem}
+  .hero-card span{font-size:.8rem;color:rgba(30,43,38,.65)}
+  .stars{color:var(--clay);letter-spacing:.15em}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+  /* ============ TRUST ============ */
+  .trust{
+    display:flex;justify-content:center;gap:4rem;flex-wrap:wrap;
+    padding:2.6rem 4vw;border-top:1px solid rgba(30,43,38,.1);border-bottom:1px solid rgba(30,43,38,.1);
+    background:var(--bone);
+  }
+  .trust div{text-align:center}
+  .trust strong{
+    display:block;font-family:'Bricolage Grotesque',sans-serif;
+    font-size:1.9rem;font-weight:800;color:var(--pine);
+  }
+  .trust span{font-size:.82rem;color:rgba(30,43,38,.6)}
+
+  /* ============ BEHANDLINGER ============ */
+  section{padding:5.5rem 4vw}
+  .kicker{
+    font-size:.75rem;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--clay);font-weight:600;
+  }
+  h2{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(2rem,4.6vw,3.4rem);letter-spacing:-.02em;
+    margin:.6rem 0 2.6rem;max-width:18ch;
+  }
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.2rem}
+  .card{
+    background:var(--bone);border:1px solid rgba(30,43,38,.08);
+    border-radius:1.4rem;padding:1.9rem 1.7rem;
+    transition:transform .25s, box-shadow .25s;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 20px 44px -22px rgba(30,43,38,.3)}
+  .card i{
+    display:flex;width:2.7rem;height:2.7rem;align-items:center;justify-content:center;
+    border-radius:.9rem;background:rgba(143,174,155,.2);color:var(--pine);
+    font-style:normal;font-size:1.2rem;
+  }
+  .card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:1.1rem;margin:1.1rem 0 .5rem}
+  .card p{font-size:.88rem;line-height:1.6;color:rgba(30,43,38,.65)}
+  .card .price{display:inline-block;margin-top:1rem;font-weight:600;font-size:.85rem;color:var(--clay)}
+
+  /* ============ OM ============ */
+  .about{
+    display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:center;
+    background:var(--pine);color:var(--linen);border-radius:2.4rem;margin:0 4vw;
+    padding:4.5rem 4rem;
+  }
+  .about .kicker{color:var(--sage)}
+  .about h2{color:var(--bone);max-width:16ch}
+  .about p{line-height:1.7;color:rgba(246,243,236,.8);margin-bottom:1.1rem}
+  .about-img{
+    height:26rem;border-radius:1.6rem;overflow:hidden;
+    background:url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1200&q=80') center/cover no-repeat;
+  }
+
+  /* ============ BOOKING ============ */
+  .booking{text-align:center}
+  .booking h2{margin-inline:auto}
+  .booking p{max-width:44ch;margin:0 auto 2.2rem;line-height:1.65;color:rgba(30,43,38,.7)}
+
+  /* ============ FOOTER ============ */
+  footer{
+    background:var(--ink);color:rgba(246,243,236,.75);
+    padding:3rem 4vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.4rem;
+    font-size:.85rem;
+  }
+  footer .logo{color:var(--linen)}
+
+  @media(max-width:820px){
+    .nav-links a:not(.nav-cta){display:none}
+    .hero{grid-template-columns:1fr;padding-top:6.5rem}
+    .hero-art{height:20rem;border-radius:1.6rem}
+    .about{grid-template-columns:1fr;padding:3rem 1.8rem;gap:2rem}
+    .about-img{height:16rem}
+    .trust{gap:2.2rem}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">NORDVIG<span>KLINIK</span></a>
+  <div class="nav-links">
+    <a href="#behandlinger">Behandlinger</a>
+    <a href="#om">Om klinikken</a>
+    <a href="#booking">Kontakt</a>
+    <a class="nav-cta" href="#booking">Book tid</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <p class="hero-eyebrow">Fysioterapi · Aarhus C · Siden 2012</p>
+    <h1>Kom af med smerterne — <em>for alvor.</em></h1>
+    <p class="hero-sub">
+      Autoriseret fysioterapi med fokus på varige resultater. Vi finder årsagen
+      til dine smerter og lægger en plan, der passer til din hverdag.
+    </p>
+    <div class="hero-actions">
+      <a class="cta" href="#booking">
+        Book en tid
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="cta-ghost" href="#behandlinger">Se behandlinger</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <div class="hero-card">
+      <div>
+        <strong>4,9 / 5</strong><br>
+        <span>Baseret på 214 anmeldelser</span>
+      </div>
+      <span class="stars">★★★★★</span>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div><strong>12+ år</strong><span>klinisk erfaring</span></div>
+  <div><strong>6.000+</strong><span>behandlede patienter</span></div>
+  <div><strong>Ingen</strong><span>henvisning nødvendig</span></div>
+  <div><strong>Samme uge</strong><span>tid inden for få dage</span></div>
+</div>
+
+<section id="behandlinger">
+  <p class="kicker">Behandlinger</p>
+  <h2>Specialiseret hjælp til krop og bevægelse</h2>
+  <div class="cards">
+    <div class="card">
+      <i>⚕</i>
+      <h3>Fysioterapi</h3>
+      <p>Grundig undersøgelse og individuel behandling af smerter i ryg, nakke, skuldre og led.</p>
+      <span class="price">Fra 495 kr.</span>
+    </div>
+    <div class="card">
+      <i>✦</i>
+      <h3>Sportsskader</h3>
+      <p>Genoptræning og forebyggelse for motionister og atleter — tilbage på banen hurtigst muligt.</p>
+      <span class="price">Fra 495 kr.</span>
+    </div>
+    <div class="card">
+      <i>☘</i>
+      <h3>Genoptræning</h3>
+      <p>Målrettede forløb efter operation eller skade, med løbende opfølgning og hjemmeøvelser.</p>
+      <span class="price">Forløb fra 1.850 kr.</span>
+    </div>
+    <div class="card">
+      <i>❋</i>
+      <h3>Massage & wellness</h3>
+      <p>Dybdegående fysiurgisk massage der løsner spændinger og forebygger nye skader.</p>
+      <span class="price">Fra 425 kr.</span>
+    </div>
+  </div>
+</section>
+
+<section id="om" style="padding-inline:0">
+  <div class="about">
+    <div class="about-img" role="img" aria-label="Behandlingsrum i Nordvig Klinik"></div>
+    <div>
+      <p class="kicker">Om klinikken</p>
+      <h2>Behandling der tager udgangspunkt i dig</h2>
+      <p>
+        Hos Nordvig Klinik møder du erfarne, autoriserede fysioterapeuter, der
+        tager sig tid til at forstå din situation. Vi behandler ikke bare
+        symptomer — vi finder årsagen.
+      </p>
+      <p>
+        Klinikken ligger centralt i Aarhus med gratis parkering, og vi har
+        aftaler med Sygeforsikringen "danmark" og alle større sundhedsforsikringer.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="booking">
+  <p class="kicker">Book en tid</p>
+  <h2>Første skridt mod en hverdag uden smerter</h2>
+  <p>
+    Ring til os på 86 12 34 56 eller book direkte online. Vi har som regel
+    ledige tider inden for få dage — og du behøver ingen henvisning.
+  </p>
+  <a class="cta" href="#">
+    Book online nu
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17L17 7M9 7h8v8"/></svg>
+  </a>
+</section>
+
+<footer>
+  <div>
+    <a class="logo" href="#">NORDVIG<span>KLINIK</span></a><br><br>
+    Klostergade 28, 8000 Aarhus C<br>
+    Tlf. 86 12 34 56 · kontakt@nordvigklinik.dk
+  </div>
+  <div>
+    Man–tors: 8–18 · Fre: 8–15<br>
+    CVR 12345678<br><br>
+    © 2026 Nordvig Klinik
+  </div>
+</footer>
+
+</body>
+</html>

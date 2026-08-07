@@ -298,28 +298,35 @@ export const pricingPackages: PricingPackage[] = [
   },
 ];
 
-export type PortfolioLayout = "estate" | "clinic" | "craft";
-
-export type PortfolioItem = {
+export type DemoSite = {
   slug: string;
+  name: string;
   category: string;
-  layout: PortfolioLayout;
+  url: string;
+  src: string;
+  description: string;
+  points: string[];
 };
 
-export const portfolioItems: PortfolioItem[] = [
+export const demoSites: DemoSite[] = [
   {
-    slug: "ejendomsmaegler",
-    category: "Ejendomsmægler",
-    layout: "estate",
+    slug: "tomrer",
+    name: "Holm & Søn",
+    category: "Tømrerfirma · København",
+    url: "www.holmogson.dk",
+    src: "/demos/tomrer.html",
+    description:
+      "Landingsside for et tømrerfirma i tredje generation — varmt, håndværksnært udtryk med fokus på tillid og ét klart mål: at få telefonen til at ringe.",
+    points: ["Konverteringsoptimeret hero", "Trust-sektion med erfaring", "Direkte tilbuds-CTA"],
   },
   {
     slug: "klinik",
-    category: "Klinik & behandling",
-    layout: "clinic",
-  },
-  {
-    slug: "haandvaerker",
-    category: "Håndværker",
-    layout: "craft",
+    name: "Nordvig Klinik",
+    category: "Fysioterapi · Aarhus",
+    url: "www.nordvigklinik.dk",
+    src: "/demos/klinik.html",
+    description:
+      "Klinik-side med roligt, professionelt udtryk — bygget til at skabe tryghed og gøre det nemt at booke en tid med det samme.",
+    points: ["Online booking-flow", "Behandlinger med priser", "Social proof med anmeldelser"],
   },
 ];

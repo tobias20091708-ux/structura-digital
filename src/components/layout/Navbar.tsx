@@ -22,7 +22,15 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const onDark = (pathname === "/" || pathname === "/priser") && !scrolled;
+  const darkPages = [
+    "/",
+    "/priser",
+    "/portfolio",
+    "/privatlivspolitik",
+    "/cookiepolitik",
+    "/handelsbetingelser",
+  ];
+  const onDark = darkPages.includes(pathname) && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
