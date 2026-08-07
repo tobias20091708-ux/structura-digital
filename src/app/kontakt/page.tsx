@@ -50,7 +50,7 @@ export default function KontaktPage() {
               <ul className="mt-10 space-y-5">
                 {infoItems.map((item) => (
                   <li key={item.label} className="flex items-start gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-foreground/10 bg-foreground/[0.03] text-primary">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-foreground/10 bg-foreground/[0.03] text-primary">
                       <item.icon className="h-5 w-5" />
                     </span>
                     <div>

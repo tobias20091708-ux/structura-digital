@@ -14,7 +14,7 @@ const projectTypes = [
 ];
 
 const inputClasses =
-  "w-full rounded-2xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-primary/60 focus:bg-foreground/[0.05]";
+  "w-full rounded-xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-primary/60 focus:bg-foreground/[0.05]";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -39,7 +39,7 @@ export function ContactForm() {
         aria-hidden={!sent}
         inert={!sent || undefined}
         className={cn(
-          "card col-start-1 row-start-1 flex flex-col items-center justify-center rounded-3xl px-8 py-12 text-center transition-opacity duration-300",
+          "card col-start-1 row-start-1 flex flex-col items-center justify-center rounded-2xl px-8 py-12 text-center transition-opacity duration-300",
           sent ? "opacity-100" : "pointer-events-none opacity-0"
         )}
       >
@@ -59,7 +59,7 @@ export function ContactForm() {
         aria-hidden={sent || undefined}
         inert={sent || undefined}
         className={cn(
-          "card col-start-1 row-start-1 space-y-5 rounded-3xl p-8 transition-opacity duration-300",
+          "card col-start-1 row-start-1 space-y-5 rounded-2xl p-8 transition-opacity duration-300",
           sent ? "pointer-events-none opacity-0" : "opacity-100"
         )}
       >

@@ -29,9 +29,7 @@ export default function PortfolioPage() {
               Eksempler på <GradientText>digitalt håndværk</GradientText>
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-foreground/55">
-              Nedenfor ser du seks illustrative eksempler på tværs af brancher, der viser den
-              designkvalitet og struktur, dit projekt kan forvente — fra restaurant og fitness til
-              webshop og kursusplatform.
+              Tre store landing pages — designet til at vise, hvordan en skarp digital førstehåndsoplevelse kan føles.
             </p>
           </AnimatedSection>
         </Container>
@@ -39,9 +37,9 @@ export default function PortfolioPage() {
 
       <section className="pb-28">
         <Container>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <div className="space-y-10">
             {portfolioItems.map((item, i) => (
-              <AnimatedSection key={item.slug} delay={(i % 3) * 0.08}>
+              <AnimatedSection key={item.slug} delay={i * 0.08}>
                 <BrowserMockupCard item={item} />
               </AnimatedSection>
             ))}
@@ -51,8 +49,8 @@ export default function PortfolioPage() {
 
       <section className="pb-28">
         <Container>
-          <AnimatedSection className="glow-border relative overflow-hidden rounded-[2.5rem] p-2">
-            <div className="card relative overflow-hidden rounded-[2.25rem] px-8 py-16 text-center sm:px-16">
+          <AnimatedSection className="glow-border relative overflow-hidden rounded-2xl p-2">
+            <div className="card relative overflow-hidden rounded-xl px-8 py-16 text-center sm:px-16">
               <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_60%_at_50%_0%,rgba(30,64,175,0.1),transparent)]"

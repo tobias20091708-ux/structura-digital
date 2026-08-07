@@ -197,80 +197,135 @@ export const faqItems: FaqItem[] = [
   },
 ];
 
-export type PortfolioTheme = "amber" | "emerald" | "violet" | "slate" | "rose" | "teal";
+export type PricingPackage = {
+  id: number;
+  name: string;
+  price: string;
+  tagline: string;
+  features: string[];
+  badge?: "popular" | "value";
+  addon?: string;
+};
 
-export type PortfolioLayout = "split" | "centered" | "grid";
+export const pricingPackages: PricingPackage[] = [
+  {
+    id: 1,
+    name: "Landing Page",
+    price: "985",
+    tagline: "Kom online hurtigt — professionelt fra dag ét.",
+    features: [
+      "Én professionel landingsside",
+      "Tekst, billeder og layout tilpasset din virksomhed",
+      "Kontaktformular med direkte notifikation til din e-mail",
+      "Mobilvenligt og hurtigt design",
+      "Klar inden for 3-5 hverdage",
+    ],
+  },
+  {
+    id: 2,
+    name: "Professionel Hjemmeside",
+    price: "3.985",
+    tagline: "Det komplette førstehåndsindtryk.",
+    features: [
+      "Alt fra Landing Page",
+      "Eksklusivt, skræddersyet design",
+      "Video- og billedintegration",
+      "Prisestimat/prisliste baseret på dine ydelser",
+      "Komplet lovpakke (privatlivspolitik, cookiepolitik, handelsbetingelser)",
+      "Kontaktformularer og call-to-action optimering",
+    ],
+  },
+  {
+    id: 3,
+    name: "Vækstpakke",
+    price: "5.985",
+    tagline: "Bygget til at skaffe dig kunder — ikke bare besøgende.",
+    badge: "popular",
+    features: [
+      "Alt fra Landing Page og Professionel Hjemmeside",
+      "Automatisk e-mail opsamling fra besøgende",
+      "Professionelle tekster baseret på research i din branche",
+      "Layout designet til at konvertere besøgende til kunder",
+      "E-mail automation der følger op på interesserede leads",
+    ],
+    addon: "Tilkøb: AI-assistent trænet på din virksomhed (+4.999 kr.)",
+  },
+  {
+    id: 4,
+    name: "Automatisering",
+    price: "985",
+    tagline: "Sæt din kundekontakt på autopilot.",
+    features: [
+      "Integration med din eksisterende hjemmeside",
+      "Automatiserede e-mail flows",
+      "Online bookingsystem direkte på din side",
+      "Opsætning og test inkluderet",
+    ],
+  },
+  {
+    id: 5,
+    name: "Hjemmeside-tjek",
+    price: "985",
+    tagline: "Ro i maven — få styr på fejl, sikkerhed og lovkrav.",
+    features: [
+      "Sikkerhedsgennemgang af din hjemmeside",
+      "Tjek af lovpligtig information (GDPR, cookies, e-handelslov)",
+      "Test af alle funktioner og formularer",
+      "Rapport med anbefalinger til forbedringer",
+    ],
+  },
+  {
+    id: 6,
+    name: "Total Makeover",
+    price: "6.985",
+    tagline: "Din side — som ny, men bedre.",
+    features: [
+      "Alt fra Automatisering og Hjemmeside-tjek",
+      "Ny tekst og layout der overbeviser dine kunder",
+      "Research i din branche og konkurrenter",
+      "Opdatering af al information",
+      "Fejlrettelser i eksisterende kode",
+      "Moderne og eksklusivt redesign",
+      "Alle funktioner genoprettet og testet",
+    ],
+  },
+  {
+    id: 7,
+    name: "Alt Inkluderet",
+    price: "12.999",
+    tagline: "Den komplette løsning fra A til Z.",
+    badge: "value",
+    features: [
+      "Alt fra alle pakker",
+      "AI-assistent trænet på din virksomheds information og ydelser",
+      "Komplet løsning fra A til Z",
+      "Prioriteret support",
+    ],
+  },
+];
+
+export type PortfolioLayout = "estate" | "clinic" | "craft";
 
 export type PortfolioItem = {
   slug: string;
-  name: string;
   category: string;
-  description: string;
-  tags: string[];
-  theme: PortfolioTheme;
-  url: string;
   layout: PortfolioLayout;
 };
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    slug: "lumiere-cafe",
-    name: "Lumière Café",
-    category: "Restaurant & café",
-    description: "Varm og indbydende hjemmeside med online bordreservation og digitalt menukort.",
-    tags: ["Landingpage", "Booking", "SEO"],
-    theme: "amber",
-    url: "lumiere-cafe.dk",
-    layout: "split",
+    slug: "ejendomsmaegler",
+    category: "Ejendomsmægler",
+    layout: "estate",
   },
   {
-    slug: "nordic-fitness",
-    name: "Nordic Fitness Studio",
-    category: "Fitness & sundhed",
-    description: "Energisk designsite med holdtilmelding, trænerprofiler og medlemsportal.",
-    tags: ["Medlemslogin", "Kalender", "Mobiloptimeret"],
-    theme: "emerald",
-    url: "nordicfitness.dk",
-    layout: "centered",
+    slug: "klinik",
+    category: "Klinik & behandling",
+    layout: "clinic",
   },
   {
-    slug: "vaekst-med-content",
-    name: "Vækst med Content",
-    category: "Online kursus",
-    description: "Kursusplatform med videomoduler, fremgangsmåling og automatiske certifikater.",
-    tags: ["LMS", "Betaling", "Fællesskab"],
-    theme: "violet",
-    url: "vaekstmedcontent.dk",
-    layout: "grid",
-  },
-  {
-    slug: "anker-partners",
-    name: "Anker & Partners",
-    category: "Advokatfirma",
-    description: "Professionel og tillidsvækkende erhvervsside med sagsformular og teamoversigt.",
-    tags: ["Erhverv", "CMS", "Sikkerhed"],
-    theme: "slate",
-    url: "ankerpartners.dk",
-    layout: "centered",
-  },
-  {
-    slug: "solberg-fotografi",
-    name: "Solberg Fotografi",
-    category: "Fotograf & portfolio",
-    description: "Visuelt fokuseret portfolio med fuldskærmsgallerier og bookingkalender.",
-    tags: ["Portfolio", "Galleri", "Hurtig indlæsning"],
-    theme: "rose",
-    url: "solbergfoto.dk",
-    layout: "grid",
-  },
-  {
-    slug: "greenloop",
-    name: "GreenLoop",
-    category: "Webshop",
-    description: "Bæredygtig webshop med produktfiltre, lagerstyring og gnidningsfrit checkout-flow.",
-    tags: ["E-commerce", "Betaling", "Lagerstyring"],
-    theme: "teal",
-    url: "greenloop.dk",
-    layout: "grid",
+    slug: "haandvaerker",
+    category: "Håndværker",
+    layout: "craft",
   },
 ];
