@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOLM & SØN — Tømrerfirma København</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --walnut:#181008;
+    --espresso:#241708;
+    --amber:#E0A458;
+    --honey:#F2C37E;
+    --cream:#F7F1E5;
+    --moss:#5C6B4F;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--walnut);
+    color:var(--cream);
+    overflow-x:hidden;
+  }
+
+  /* ============ NAV ============ */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:1.4rem 4vw;
+    background:linear-gradient(to bottom, rgba(24,16,8,.85), transparent);
+    backdrop-filter:blur(2px);
+  }
+  .logo{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;font-size:1.15rem;letter-spacing:.12em;
+    color:var(--cream);text-decoration:none;
+  }
+  .logo span{color:var(--amber)}
+  .nav-links{display:flex;gap:2.2rem;align-items:center}
+  .nav-links a{
+    color:var(--cream);text-decoration:none;font-size:.85rem;font-weight:500;
+    letter-spacing:.04em;opacity:.85;transition:opacity .2s;
+  }
+  .nav-links a:hover{opacity:1}
+  .nav-cta{
+    background:var(--amber);color:var(--walnut)!important;opacity:1!important;
+    padding:.6rem 1.3rem;border-radius:999px;font-weight:600;
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;min-height:100vh;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    padding:0 4vw 6vh;
+    background:
+      linear-gradient(to top, rgba(24,16,8,.96) 0%, rgba(24,16,8,.35) 45%, rgba(24,16,8,.55) 100%),
+      url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80') center/cover no-repeat;
+  }
+  .hero-eyebrow{
+    font-size:.8rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--honey);font-weight:600;margin-bottom:1rem;
+    opacity:0;animation:rise .8s .2s forwards;
+  }
+  .hero h1{
+    font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:800;
+    font-size:clamp(3.4rem, 11vw, 9.5rem);
+    line-height:.92;
+    letter-spacing:-.02em;
+    max-width:12ch;
+    opacity:0;animation:rise .8s .35s forwards;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(100deg, var(--amber), var(--honey) 60%, #fff3dd);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-bottom{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    flex-wrap:wrap;gap:2rem;margin-top:3rem;
+    opacity:0;animation:rise .8s .5s forwards;
+  }
+  .hero-sub{max-width:34ch;font-size:1.05rem;line-height:1.6;color:rgba(247,241,229,.85)}
+  .cta{
+    display:inline-flex;align-items:center;gap:.7rem;
+    background:var(--amber);color:var(--walnut);
+    font-weight:600;font-size:1rem;text-decoration:none;
+    padding:1.1rem 2rem;border-radius:999px;
+    transition:transform .25s, box-shadow .25s;
+    box-shadow:0 8px 40px rgba(224,164,88,.35);
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 14px 50px rgba(224,164,88,.5)}
+  .cta svg{transition:transform .25s}
+  .cta:hover svg{transform:translate(3px,-3px)}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+  /* ============ TRUST BAR ============ */
+  .trust-bar{
+    display:flex;justify-content:center;align-items:center;flex-wrap:wrap;
+    gap:3rem;padding:2.8rem 4vw;
+    border-bottom:1px solid rgba(247,241,229,.08);
+  }
+  .trust-item{
+    display:flex;align-items:center;gap:.7rem;
+    font-size:.85rem;color:rgba(247,241,229,.55);
+    letter-spacing:.03em;
+  }
+  .trust-item svg{color:var(--amber);flex-shrink:0}
+  .trust-item strong{color:var(--cream);font-weight:600}
+
+  /* ============ PROJECTS ============ */
+  .projects{padding:7rem 4vw 5rem}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    flex-wrap:wrap;gap:1rem;margin-bottom:3.5rem;
+  }
+  .section-head h2{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;
+    font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-.01em;
+  }
+  .section-head p{color:rgba(247,241,229,.6);font-size:.95rem}
+  .grid{
+    display:grid;grid-template-columns:repeat(12,1fr);gap:1.2rem;
+  }
+  .card{
+    position:relative;border-radius:20px;overflow:hidden;
+    min-height:340px;display:flex;align-items:flex-end;
+    background-size:cover;background-position:center;
+    transition:transform .35s;
+  }
+  .card:hover{transform:scale(.985)}
+  .card::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(to top, rgba(24,16,8,.85) 0%, transparent 55%);
+  }
+  .card-label{
+    position:relative;z-index:2;padding:1.6rem;
+  }
+  .card-label h3{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.35rem;
+  }
+  .card-label p{font-size:.85rem;color:var(--honey);margin-top:.25rem}
+  .c1{grid-column:span 7;background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80')}
+  .c2{grid-column:span 5;background-image:url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=900&q=80')}
+  .c3{grid-column:span 5;background-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80')}
+  .c4{grid-column:span 7;background-image:url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=1200&q=80')}
+
+  /* ============ SERVICES ============ */
+  .services{padding:5rem 4vw 6rem}
+  .service-grid{
+    display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:1.5rem;margin-top:3rem;
+  }
+  .service-card{
+    padding:2.2rem;
+    background:rgba(247,241,229,.04);
+    border:1px solid rgba(247,241,229,.08);
+    border-radius:16px;
+    transition:background .3s, border-color .3s, transform .3s;
+  }
+  .service-card:hover{
+    background:rgba(247,241,229,.07);
+    border-color:rgba(224,164,88,.3);
+    transform:translateY(-4px);
+  }
+  .service-icon{
+    width:48px;height:48px;border-radius:12px;
+    background:rgba(224,164,88,.12);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:1.2rem;color:var(--amber);
+  }
+  .service-card h3{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:600;
+    font-size:1.15rem;margin-bottom:.55rem;
+  }
+  .service-card p{
+    font-size:.9rem;line-height:1.65;color:rgba(247,241,229,.6);
+  }
+
+  /* ============ STATS ============ */
+  .stats{
+    display:grid;grid-template-columns:repeat(3, 1fr);
+    gap:0;margin:0 4vw 5rem;border-radius:20px;overflow:hidden;
+    background:linear-gradient(135deg, rgba(224,164,88,.1), rgba(92,107,79,.08));
+    border:1px solid rgba(247,241,229,.08);
+  }
+  .stat{
+    padding:3rem 2rem;text-align:center;
+    border-right:1px solid rgba(247,241,229,.08);
+  }
+  .stat:last-child{border-right:none}
+  .stat-num{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(2.4rem,5vw,3.6rem);
+    background:linear-gradient(100deg, var(--amber), var(--honey));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .stat-label{
+    font-size:.85rem;color:rgba(247,241,229,.55);margin-top:.4rem;
+    letter-spacing:.04em;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact{
+    position:relative;padding:10rem 4vw;text-align:center;
+    background:
+      linear-gradient(rgba(24,16,8,.88), rgba(24,16,8,.88)),
+      url('https://images.unsplash.com/photo-1504148455328-c376907d081c?w=1600&q=80') center/cover fixed no-repeat;
+  }
+  .contact h2{
+    font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:clamp(2.4rem,6vw,4.5rem);letter-spacing:-.02em;
+    max-width:16ch;margin:0 auto 1.2rem;
+  }
+  .contact h2 em{font-style:normal;color:var(--amber)}
+  .contact p{color:rgba(247,241,229,.7);margin-bottom:2.5rem;font-size:1.05rem}
+
+  /* ============ FOOTER ============ */
+  footer{
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+    padding:2rem 4vw;font-size:.8rem;color:rgba(247,241,229,.45);
+    border-top:1px solid rgba(247,241,229,.08);
+  }
+
+  @media (max-width:768px){
+    .grid{grid-template-columns:1fr}
+    .c1,.c2,.c3,.c4{grid-column:span 1}
+    .nav-links a:not(.nav-cta){display:none}
+    .contact{background-attachment:scroll}
+    .stats{grid-template-columns:1fr}
+    .stat{border-right:none;border-bottom:1px solid rgba(247,241,229,.08)}
+    .stat:last-child{border-bottom:none}
+    .trust-bar{gap:1.5rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    .hero-eyebrow,.hero h1,.hero-bottom{opacity:1}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">HOLM <span>&</span> SØN</a>
+  <div class="nav-links">
+    <a href="#projekter">Projekter</a>
+    <a href="#services">Ydelser</a>
+    <a href="#kontakt" class="nav-cta">Få et tilbud</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <p class="hero-eyebrow">Tømrerfirma · København · Est. 1987</p>
+  <h1>Bygget til at <em>holde.</em></h1>
+  <div class="hero-bottom">
+    <p class="hero-sub">Kvalitetstømrerarbejde i tredje generation. Fra tagkonstruktion til skræddersyet snedkeri.</p>
+    <a class="cta" href="#kontakt">
+      Få et uforpligtende tilbud
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- TRUST BAR (erstatter marquee) -->
+<div class="trust-bar">
+  <div class="trust-item">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <span><strong>37 års</strong> erfaring</span>
+  </div>
+  <div class="trust-item">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+    <span><strong>850+</strong> afsluttede projekter</span>
+  </div>
+  <div class="trust-item">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    <span><strong>4.9</strong> på Google (127 anmeldelser)</span>
+  </div>
+  <div class="trust-item">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    <span><strong>Autoriseret</strong> tømrerfirma</span>
+  </div>
+</div>
+
+<section class="projects" id="projekter">
+  <div class="section-head">
+    <h2>Seneste projekter</h2>
+    <p>Udvalgte opgaver fra København og omegn</p>
+  </div>
+  <div class="grid">
+    <div class="card c1"><div class="card-label"><h3>Villa Frederiksberg</h3><p>Totalrenovering · 2026</p></div></div>
+    <div class="card c2"><div class="card-label"><h3>Køkken, Østerbro</h3><p>Snedkeri · 2026</p></div></div>
+    <div class="card c3"><div class="card-label"><h3>Byhus Nørrebro</h3><p>Tagkonstruktion · 2025</p></div></div>
+    <div class="card c4"><div class="card-label"><h3>Sommerhus Hornbæk</h3><p>Tilbygning · 2025</p></div></div>
+  </div>
+</section>
+
+<!-- SERVICES (kort i stedet for linier) -->
+<section class="services" id="services">
+  <div class="section-head">
+    <h2>Det laver vi</h2>
+    <p>Alt tømrerarbejde under ét tag</p>
+  </div>
+  <div class="service-grid">
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <h3>Tagkonstruktion</h3>
+      <p>Nyt tag, tagrenovering og kviste. Håndspær, præfab og undertage.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      </div>
+      <h3>Skræddersyet snedkeri</h3>
+      <p>Specialfremstillede møbler, reoler, garderober og indbyggede løsninger.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <h3>Køkken & bad</h3>
+      <p>Montering af køkken og badeværelse. Vi koordinerer med VVS og el.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      </div>
+      <h3>Terrasser & udestuer</h3>
+      <p>Terrasser i træ og komposit, overdækninger, og helårs-udestuer.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h3>Vinduer & døre</h3>
+      <p>Udskiftning, reparation og energioptimering af vinduer og yderdøre.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <h3>Renovering</h3>
+      <p>Total- og delrenovering af boliger og erhverv. Fast pris efter aftale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">37</div>
+    <div class="stat-label">Års erfaring</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">850+</div>
+    <div class="stat-label">Afsluttede projekter</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4.9</div>
+    <div class="stat-label">Google rating</div>
+  </div>
+</div>
+
+<section class="contact" id="kontakt">
+  <h2>Skal vi bygge <em>dit</em> næste projekt?</h2>
+  <p>Ring, skriv, eller kig forbi værkstedet. Vi svarer inden for 24 timer.</p>
+  <a class="cta" href="tel:+4512345678">
+    Ring 12 34 56 78
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H5M13 3V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</section>
+
+<footer>
+  <span>© 2026 Holm & Søn Tømrerfirma ApS</span>
+  <span>CVR 12345678 · København</span>
+  <span>Bygget af Structura Digital</span>
+</footer>
+
+</body>
+</html>
