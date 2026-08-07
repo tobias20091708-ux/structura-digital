@@ -45,7 +45,7 @@ function VideoPlaceholder() {
       aria-label="Videopræsentation af Structura Digital kommer snart"
       className="card group relative aspect-video overflow-hidden rounded-2xl"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-primary to-primary-light" />
+      <div className="absolute inset-0 bg-gradient-to-br from-dark via-primary to-primary-light" />
       <div
         aria-hidden
         className="absolute inset-0 opacity-[0.12] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:32px_32px]"

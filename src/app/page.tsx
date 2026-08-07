@@ -1,25 +1,25 @@
 import { Hero } from "@/components/home/Hero";
 import { TrustStats } from "@/components/home/TrustStats";
-import { AboutVideo } from "@/components/home/AboutVideo";
-import { DemoShowcase } from "@/components/home/DemoShowcase";
-import { ServicesTabs } from "@/components/home/ServicesTabs";
+import { ServicesBento } from "@/components/home/ServicesBento";
 import { Process } from "@/components/home/Process";
-import { Benefits } from "@/components/home/Benefits";
-import { CtaBanner } from "@/components/home/CtaBanner";
+import { DemoShowcase } from "@/components/home/DemoShowcase";
+import { AboutVideo } from "@/components/home/AboutVideo";
+import { PricingTeaser } from "@/components/home/PricingTeaser";
 import { FaqSection } from "@/components/home/FaqSection";
+import { CtaBanner } from "@/components/home/CtaBanner";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <TrustStats />
-      <AboutVideo />
-      <DemoShowcase />
-      <ServicesTabs />
+      <ServicesBento />
       <Process />
-      <Benefits />
-      <CtaBanner />
+      <DemoShowcase />
+      <AboutVideo />
+      <PricingTeaser />
       <FaqSection />
+      <CtaBanner />
     </>
   );
 }

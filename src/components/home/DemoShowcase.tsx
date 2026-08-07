@@ -6,11 +6,11 @@ import { DemoPreview } from "@/components/DemoPreview";
 
 export function DemoShowcase() {
   return (
-    <section className="bg-dark py-20 sm:py-28">
+    <section id="demoer" className="scroll-mt-24 bg-dark py-20 sm:py-28">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Eksempler</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-5xl">
             Se hvad vi bygger
           </h2>
           <p className="mt-4 text-lg text-white/60">

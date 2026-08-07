@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AmbientOrbs } from "@/components/ui/AmbientOrbs";
@@ -16,10 +16,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Structura Digital — Hjemmesider, kurser & lead pages der får din telefon til at ringe",
+  title: "Structura Digital — Hjemmesider der skaffer kunder",
   description:
-    "Structura Digital bygger hjemmesider, online kurser, lead pages og laver data-tjek for små virksomheder. Starter fra 985 kr — ring for et tilbud på 30 13 73 28.",
+    "Vi bygger hjemmesider, kursusplatforme og landingssider for danske virksomheder. Fra 985 kr — bygget i moderne teknologi, klar på få dage.",
 };
 
 export default function RootLayout({
@@ -30,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="da"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bricolage.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col overflow-x-hidden bg-background text-foreground">
         <AmbientOrbs />

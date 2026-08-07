@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --surface: #f8fafc;
-  --dark: #0f172a;
-  --foreground: #1f2937;
-  --muted: #6b7280;
-  --primary: #1e3a5f;
-  --primary-light: #2563eb;
-  --accent: #ea580c;
-  --accent-strong: #c2410c;
-  --success: #059669;
-  --success-strong: #047857;
-  --card: #ffffff;
+  --background: #faf7f2;
+  --surface: #f2ede4;
+  --dark: #171310;
+  --foreground: #231f1a;
+  --muted: #7a7168;
+  --primary: #1e3a34;
+  --primary-light: #3f9478;
+  --accent: #e4572e;
+  --accent-strong: #c43e1a;
+  --success: #2e7d5b;
+  --success-strong: #236448;
+  --card: #fffcf7;
 }
 
 @theme inline {
@@ -30,6 +30,7 @@
   --color-card: var(--card);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bricolage);
 }
 
 * {
@@ -49,8 +50,18 @@ body {
 h1,
 h2,
 h3 {
+  font-family: var(--font-bricolage), var(--font-geist-sans), Arial, sans-serif;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.035 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {

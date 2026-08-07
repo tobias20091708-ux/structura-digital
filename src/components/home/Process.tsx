@@ -9,22 +9,31 @@ export function Process() {
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Sådan foregår det</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-5xl">
             Fra idé til lancering
           </h2>
+          <p className="mt-4 text-lg text-white/60">
+            Fire trin. Ingen overraskelser. De fleste projekter er live på 1-2 uger.
+          </p>
         </AnimatedSection>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="relative mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          <div
+            aria-hidden
+            className="absolute top-6 right-[12%] left-[12%] hidden h-px bg-gradient-to-r from-accent/40 via-white/15 to-primary-light/40 lg:block"
+          />
           {processSteps.map((step, i) => (
-            <AnimatedSection key={step.number} delay={i * 0.08} className="card rounded-xl p-6">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-primary-light/[0.08] text-primary-light">
-                  <step.icon className="h-5 w-5" />
-                </span>
-                <span className="text-sm font-bold text-foreground/30">{step.number}</span>
+            <AnimatedSection key={step.number} delay={i * 0.1} className="relative text-center lg:text-left">
+              <div className="relative z-10 mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-accent/30 bg-dark text-accent lg:mx-0">
+                <step.icon className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-base font-bold text-foreground">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted">{step.description}</p>
+              <p className="mt-5 text-xs font-bold tracking-[0.2em] text-white/30">
+                TRIN {step.number}
+              </p>
+              <h3 className="mt-2 text-lg font-bold text-white">{step.title}</h3>
+              <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-white/55 lg:mx-0">
+                {step.description}
+              </p>
             </AnimatedSection>
           ))}
         </div>

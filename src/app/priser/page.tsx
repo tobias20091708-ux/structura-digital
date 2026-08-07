@@ -21,7 +21,7 @@ export default function PricingPage() {
       <section className="relative overflow-hidden pt-40 pb-20">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(37,99,235,0.15),transparent)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_-10%,rgba(228,87,46,0.13),transparent)]"
         />
         <Container>
           <AnimatedSection className="mx-auto max-w-2xl text-center">
