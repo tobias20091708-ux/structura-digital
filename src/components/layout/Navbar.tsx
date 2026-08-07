@@ -14,6 +14,7 @@ const links = [
   { href: "/#services", label: "Services" },
   { href: "/#fordele", label: "Om os" },
   { href: "/portfolio", label: "Cases" },
+  { href: "/priser", label: "Priser" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -21,7 +22,7 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const onDark = pathname === "/" && !scrolled;
+  const onDark = (pathname === "/" || pathname === "/priser") && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
