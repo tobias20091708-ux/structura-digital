@@ -93,16 +93,18 @@ export default function PricingPage() {
       </section>
 
       <section className="pb-28">
-        <Container className="max-w-3xl">
-          <AnimatedSection className="text-center">
-            <Badge invert>Spørgsmål</Badge>
-            <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Godt at vide
-            </h2>
-          </AnimatedSection>
-          <AnimatedSection delay={0.1} className="mt-12">
-            <Faq items={faqItems} />
-          </AnimatedSection>
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <AnimatedSection className="text-center">
+              <Badge invert>Spørgsmål</Badge>
+              <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Godt at vide
+              </h2>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1} className="mt-12">
+              <Faq items={faqItems} />
+            </AnimatedSection>
+          </div>
         </Container>
       </section>
     </div>

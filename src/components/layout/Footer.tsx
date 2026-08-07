@@ -7,7 +7,14 @@ import { contact } from "@/lib/data";
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/#fordele", label: "Om os" },
+  { href: "/priser", label: "Priser" },
   { href: "/kontakt", label: "Kontakt" },
+];
+
+const legalLinks = [
+  { href: "/privatlivspolitik", label: "Privatlivspolitik" },
+  { href: "/cookiepolitik", label: "Cookiepolitik" },
+  { href: "/handelsbetingelser", label: "Handelsbetingelser" },
 ];
 
 export function Footer() {
@@ -60,6 +67,15 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row">
           <p>© 2026 Structura Digital. Alle rettigheder forbeholdt.</p>
+          <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            {legalLinks.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="transition-colors hover:text-white">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </footer>
