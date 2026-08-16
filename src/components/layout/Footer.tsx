@@ -7,7 +7,6 @@ import { contact } from "@/lib/data";
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/#fordele", label: "Om os" },
-  { href: "/priser", label: "Priser" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 

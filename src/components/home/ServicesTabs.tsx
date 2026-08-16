@@ -14,7 +14,7 @@ export function ServicesTabs() {
   const active = services.find((s) => s.id === activeId) ?? services[0];
 
   return (
-    <section id="services" className="scroll-mt-24 bg-dark py-20 sm:py-28">
+    <section id="services" className="scroll-mt-24 bg-dark py-14 sm:py-20">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Services</Badge>

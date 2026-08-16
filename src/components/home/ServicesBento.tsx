@@ -59,7 +59,7 @@ const bentoServices: BentoService[] = [
 
 export function ServicesBento() {
   return (
-    <section id="services" className="scroll-mt-24 bg-dark py-20 sm:py-28">
+    <section id="services" className="scroll-mt-24 bg-dark py-14 sm:py-20">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Services</Badge>

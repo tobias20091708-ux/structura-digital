@@ -6,7 +6,7 @@ import { contact } from "@/lib/data";
 
 export function CtaBanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-dark to-primary py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-dark to-primary py-14 sm:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:36px_36px]"

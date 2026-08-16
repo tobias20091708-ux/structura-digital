@@ -48,7 +48,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-8 text-5xl leading-[1.02] font-bold tracking-tight text-white sm:text-7xl lg:text-8xl"
+            className="mt-8 text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
             Din næste hjemmeside{" "}
             <span className="relative inline-block text-accent">
@@ -73,11 +73,8 @@ export function Hero() {
             className="mt-12 flex flex-wrap items-center justify-center gap-4"
           >
             <Button href="/kontakt" size="lg">
-              Få et uforpligtende tilbud
+              Kontakt os
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-            </Button>
-            <Button href="/#demoer" variant="outlineOnDark" size="lg">
-              Se hvad vi bygger
             </Button>
           </motion.div>
         </div>

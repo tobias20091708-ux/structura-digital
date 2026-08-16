@@ -6,7 +6,7 @@ import { faqItems } from "@/lib/data";
 
 export function FaqSection() {
   return (
-    <section className="bg-dark py-20 sm:py-28">
+    <section className="bg-dark py-14 sm:py-20">
       <Container className="max-w-3xl">
         <AnimatedSection className="text-center">
           <Badge invert>Spørgsmål</Badge>

@@ -8,13 +8,10 @@ import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
-import { ctaText } from "@/lib/data";
 
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/#fordele", label: "Om os" },
-  { href: "/portfolio", label: "Cases" },
-  { href: "/priser", label: "Priser" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -24,8 +21,6 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const darkPages = [
     "/",
-    "/priser",
-    "/portfolio",
     "/privatlivspolitik",
     "/cookiepolitik",
     "/handelsbetingelser",
@@ -83,7 +78,7 @@ export function Navbar() {
 
           <div className="hidden md:block">
             <Button href="/kontakt" size="sm">
-              {ctaText}
+              Kontakt os
             </Button>
           </div>
 
@@ -128,7 +123,7 @@ export function Navbar() {
               ))}
             </nav>
             <Button href="/kontakt" className="mt-3 w-full" onClick={() => setOpen(false)}>
-              {ctaText}
+              Kontakt os
             </Button>
           </motion.div>
         )}

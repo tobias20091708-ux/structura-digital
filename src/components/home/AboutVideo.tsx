@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/Badge";
  */
 export function AboutVideo({ videoUrl }: { videoUrl?: string } = {}) {
   return (
-    <section className="bg-dark py-20 sm:py-28">
+    <section className="bg-dark py-14 sm:py-20">
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Lær os at kende</Badge>
