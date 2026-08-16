@@ -41,7 +41,7 @@ export function Hero() {
             <span
               className={`h-1.5 w-1.5 rounded-full bg-accent ${reduce ? "" : "animate-pulse"}`}
             />
-            Dansk webbureau — bygget til vækst
+            Dansk webbureau bygget til vækst
           </motion.span>
 
           <motion.h1
@@ -63,7 +63,7 @@ export function Hero() {
             className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60 md:text-xl"
           >
             Vi bygger hjemmesider, kursusplatforme og landingssider, der skaffer
-            kunder — ikke bare besøgende.
+            kunder, ikke bare besøgende.
           </motion.p>
 
           <motion.div

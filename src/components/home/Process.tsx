@@ -10,7 +10,7 @@ export function Process() {
         <AnimatedSection className="max-w-2xl text-left">
           <Badge invert>Sådan foregår det</Badge>
           <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
-            Fra idé til lancering
+            Fra ide til lancering
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-white/60">
             Fire trin. Ingen overraskelser. De fleste projekter er live på 1-2 uger.

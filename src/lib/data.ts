@@ -28,7 +28,7 @@ export type TrustStat = {
 export const trustStats: TrustStat[] = [
   {
     stat: "Skræddersyet",
-    description: "Hver løsning bygges til netop din virksomhed — ingen templates.",
+    description: "Hver løsning bygges til netop din virksomhed. Ingen templates.",
   },
   {
     stat: "100% dansk",
@@ -36,7 +36,7 @@ export const trustStats: TrustStat[] = [
   },
   {
     stat: "Hurtig levering",
-    description: "Din nye hjemmeside klar på 1-2 uger — ikke måneder.",
+    description: "Din nye hjemmeside er klar på 1-2 uger, ikke måneder.",
   },
 ];
 
@@ -75,7 +75,7 @@ export const services: Service[] = [
     tab: "Lead pages",
     icon: Target,
     heading: "Lead pages der fanger",
-    text: "Landingssider designet til én ting: at få besøgende til at handle. Perfekt til kampagner, launches og leadgenerering.",
+    text: "Landingssider designet til en ting: at få besøgende til at handle. Perfekt til kampagner, launches og leadgenerering.",
     points: [
       "Konverteringsoptimeret design",
       "A/B test-venligt setup",
@@ -87,7 +87,7 @@ export const services: Service[] = [
     tab: "Data checking",
     icon: Wrench,
     heading: "Data checking og reparation",
-    text: "Vi tjekker og reparerer din virksomheds data — fra hjemmesidefejl til kontaktoplysninger på tværs af platforme.",
+    text: "Vi tjekker og reparerer din virksomheds data, fra hjemmesidefejl til kontaktoplysninger på tværs af platforme.",
     points: [
       "Teknisk SEO-audit",
       "Fejlrettelse og optimering",
@@ -109,7 +109,7 @@ export const processSteps: ProcessStep[] = [
     icon: MessageCircle,
     title: "Samtale",
     description:
-      "En uforpligtende snak om dine behov — du får et konkret forslag med fast pris og tidsplan.",
+      "En uforpligtende snak om dine behov, hvor du får et konkret forslag med fast pris og tidsplan.",
   },
   {
     number: "02",
@@ -121,7 +121,7 @@ export const processSteps: ProcessStep[] = [
     number: "03",
     icon: Code2,
     title: "Udvikling",
-    description: "Vi bygger siden i moderne teknologi — hurtigt og skalerbart.",
+    description: "Vi bygger siden i moderne teknologi, hurtigt og skalerbart.",
   },
   {
     number: "04",
@@ -141,7 +141,7 @@ export const benefits: Benefit[] = [
   {
     icon: UserCheck,
     title: "Personlig kontakt",
-    description: "Du taler direkte med den der bygger din side — ingen mellemled.",
+    description: "Du taler direkte med den der bygger din side. Ingen mellemled.",
   },
   {
     icon: Wallet,

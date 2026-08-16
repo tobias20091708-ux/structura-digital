@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <Logo invert />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">
-              Vi bygger hjemmesider, online kurser, lead pages og tjekker din virksomheds data —
+              Vi bygger hjemmesider, online kurser, lead pages og tjekker din virksomheds data,
               så små virksomheder i Danmark bliver fundet af flere kunder.
             </p>
           </div>

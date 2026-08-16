@@ -24,14 +24,14 @@ const bentoServices: BentoService[] = [
   {
     icon: Globe,
     title: "Hjemmesider",
-    text: "Moderne, lynhurtige sider bygget til at gøre besøgende til kunder. Mobilvenlige og SEO-klar fra dag ét.",
+    text: "Moderne, lynhurtige sider bygget til at gøre besøgende til kunder. Mobilvenlige og SEO-klar fra dag et.",
     className: "md:col-span-2",
     featured: true,
   },
   {
     icon: Target,
     title: "Landingssider",
-    text: "Én side. Ét mål. Flere kunder — perfekt til kampagner og annoncer.",
+    text: "En side med et klart mål: flere kunder. Perfekt til kampagner og annoncer.",
   },
   {
     icon: GraduationCap,

@@ -14,7 +14,7 @@ export function Benefits() {
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-white/60">
             Vi er en dansk digital partner for virksomheder, der vil stå stærkere
-            online — med personlig kontakt, gennemskuelige priser og løsninger, der er
+            online. Personlig kontakt, gennemskuelige priser og løsninger, der er
             bygget til deres behov.
           </p>
         </AnimatedSection>

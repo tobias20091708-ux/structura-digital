@@ -81,7 +81,7 @@ export function CookieConsent() {
                 <p className="text-sm font-semibold text-white">Vi bruger cookies</p>
                 <p className="mt-1 text-xs leading-relaxed text-white/60">
                   Vi bruger cookies til at forbedre din oplevelse. Nødvendige cookies
-                  er altid aktive — statistik og markedsføring kræver dit samtykke.
+                  er altid aktive. Statistik og markedsføring kræver dit samtykke.
                   Læs vores{" "}
                   <Link
                     href="/cookiepolitik"
@@ -98,7 +98,7 @@ export function CookieConsent() {
                 Kun nødvendige
               </Button>
               <Button size="sm" onClick={() => choose("accepted")}>
-                Acceptér
+                Accepter
               </Button>
             </div>
           </motion.div>

@@ -46,7 +46,7 @@ export function ContactForm() {
         <CheckCircle2 className="h-12 w-12 text-success" />
         <h3 className="mt-5 text-xl text-foreground sm:text-2xl">Tak for din besked!</h3>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/55">
-          Vi vender tilbage hurtigst muligt — svar inden 24 timer.
+          Vi vender tilbage hurtigst muligt, senest inden 24 timer.
         </p>
         <Button variant="outline" className="mt-8" onClick={handleReset}>
           Send en ny besked

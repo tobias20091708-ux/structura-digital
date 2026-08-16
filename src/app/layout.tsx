@@ -23,9 +23,9 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Structura Digital — Hjemmesider der skaffer kunder",
+  title: "Structura Digital | Hjemmesider der skaffer kunder",
   description:
-    "Vi bygger hjemmesider, kursusplatforme og landingssider for danske virksomheder — bygget i moderne teknologi, klar på få dage.",
+    "Vi bygger hjemmesider, kursusplatforme og landingssider for danske virksomheder. Moderne teknologi, klar på få dage.",
 };
 
 export default function RootLayout({

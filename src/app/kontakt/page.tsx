@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Structura Digital",
+  title: "Kontakt | Structura Digital",
   description:
     "Få et gratis tilbud fra Structura Digital på din næste hjemmeside, kursusplatform, lead page eller data-tjek. Svar inden 24 timer.",
 };
@@ -44,7 +44,8 @@ export default function KontaktPage() {
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-foreground/55">
                 Fortæl os om dit projekt, så vender vi tilbage med et konkret forslag til
-                løsning, tidsplan og pris — helt uforpligtende. Ingen binding.
+                løsning, tidsplan og pris. Det er helt uforpligtende, og der er
+                ingen binding.
               </p>
 
               <ul className="mt-10 space-y-5">
