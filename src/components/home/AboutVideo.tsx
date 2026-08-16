@@ -16,7 +16,7 @@ export function AboutVideo({ videoUrl }: { videoUrl?: string } = {}) {
           <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Se hvem vi er, og hvordan vi arbejder
           </h2>
-          <p className="mt-4 text-lg text-white/60">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             En kort video om hvem vi er, hvad vi laver, og hvordan vi hjælper din
             virksomhed med at stå stærkere online.
           </p>

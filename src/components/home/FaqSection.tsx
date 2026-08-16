@@ -13,7 +13,7 @@ export function FaqSection() {
           <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Ofte stillede spørgsmål
           </h2>
-          <p className="mt-4 text-lg text-white/60">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             De spørgsmål vi oftest får, besvaret med det samme.
           </p>
         </AnimatedSection>

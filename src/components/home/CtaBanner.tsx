@@ -16,7 +16,7 @@ export function CtaBanner() {
           <h2 className="mx-auto max-w-2xl text-3xl tracking-tight text-white sm:text-4xl">
             Klar til at komme online?
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
+          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-white/70">
             Kontakt os i dag for en uforpligtende snak om din nye hjemmeside.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

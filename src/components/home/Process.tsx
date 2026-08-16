@@ -12,7 +12,7 @@ export function Process() {
           <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Fra idé til lancering
           </h2>
-          <p className="mt-4 text-lg text-white/60">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             Fire trin. Ingen overraskelser. De fleste projekter er live på 1-2 uger.
           </p>
         </AnimatedSection>

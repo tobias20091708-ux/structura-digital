@@ -21,7 +21,7 @@ export function ServicesTabs() {
           <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Det vi kan hjælpe dig med
           </h2>
-          <p className="mt-4 text-lg text-white/60">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             Vi bygger hjemmesider, onlinekurser og målrettede landingssider – og sørger
             for, at dine data og kontaktoplysninger fungerer korrekt på tværs af
             platforme.

@@ -66,7 +66,7 @@ export function ServicesBento() {
           <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Vi bygger det. Du vokser.
           </h2>
-          <p className="mt-4 text-lg text-white/60">
+          <p className="mt-4 text-lg leading-relaxed text-white/60">
             Alt hvad din virksomhed skal bruge for at blive fundet, valgt og
             kontaktet online.
           </p>
