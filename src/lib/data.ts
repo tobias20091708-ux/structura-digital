@@ -151,34 +151,11 @@ export const benefits: Benefit[] = [
   {
     icon: Headset,
     title: "Dansk support",
-    description: "Hjælp når du har brug for det — på dansk, til danske virksomheder.",
+    description: "Hjælp når du har brug for det, på dansk og til danske virksomheder.",
   },
   {
     icon: Zap,
     title: "Moderne teknologi",
-    description: "Hurtige sider bygget i Next.js — ikke tunge WordPress-templates.",
-  },
-];
-
-export type FaqItem = { question: string; answer: string };
-
-export const faqItems: FaqItem[] = [
-  {
-    question: "Hvor lang tid tager det?",
-    answer: "De fleste hjemmesider er klar inden for 1-2 uger.",
-  },
-  {
-    question: "Kan jeg selv redigere min side?",
-    answer:
-      "Ja, vi sætter dig op med et brugervenligt system så du selv kan opdatere tekst og billeder.",
-  },
-  {
-    question: "Hvad med hosting og domæne?",
-    answer: "Vi hjælper med alt det tekniske — hosting, domæne og email.",
-  },
-  {
-    question: "Laver I også webshops?",
-    answer:
-      "Vi fokuserer på hjemmesider, kurser og lead pages. Kontakt os hvis du har et webshop-behov, så finder vi en løsning.",
+    description: "Hurtige sider bygget i Next.js, ikke tunge WordPress-templates.",
   },
 ];
