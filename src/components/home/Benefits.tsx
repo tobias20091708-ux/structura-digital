@@ -9,7 +9,7 @@ export function Benefits() {
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Om os</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Derfor vælger virksomheder os
           </h2>
           <p className="mt-4 text-lg text-white/60">
@@ -25,7 +25,7 @@ export function Benefits() {
               <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-accent/[0.08] text-accent">
                 <benefit.icon className="h-5 w-5" />
               </span>
-              <h3 className="mt-4 text-base font-bold text-foreground">{benefit.title}</h3>
+              <h3 className="mt-4 text-xl text-foreground sm:text-2xl">{benefit.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted">{benefit.description}</p>
             </AnimatedSection>
           ))}

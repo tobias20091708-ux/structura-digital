@@ -63,7 +63,7 @@ export function ServicesBento() {
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Services</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Vi bygger det. Du vokser.
           </h2>
           <p className="mt-4 text-lg text-white/60">
@@ -95,7 +95,7 @@ export function ServicesBento() {
                 >
                   <service.icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-5 text-lg font-bold text-white">{service.title}</h3>
+                <h3 className="mt-5 text-xl text-white sm:text-2xl">{service.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-white/55">{service.text}</p>
               </div>
             </AnimatedSection>

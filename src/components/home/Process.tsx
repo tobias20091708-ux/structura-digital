@@ -7,9 +7,9 @@ export function Process() {
   return (
     <section className="bg-dark py-14 sm:py-20">
       <Container>
-        <AnimatedSection className="mx-auto max-w-2xl text-center">
+        <AnimatedSection className="max-w-2xl text-left">
           <Badge invert>Sådan foregår det</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Fra idé til lancering
           </h2>
           <p className="mt-4 text-lg text-white/60">
@@ -30,7 +30,7 @@ export function Process() {
               <p className="mt-5 text-xs font-bold tracking-[0.2em] text-white/30">
                 TRIN {step.number}
               </p>
-              <h3 className="mt-2 text-lg font-bold text-white">{step.title}</h3>
+              <h3 className="mt-2 text-xl text-white sm:text-2xl">{step.title}</h3>
               <p className="mx-auto mt-2 max-w-xs text-sm leading-relaxed text-white/55 lg:mx-0">
                 {step.description}
               </p>

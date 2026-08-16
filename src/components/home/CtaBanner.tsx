@@ -13,7 +13,7 @@ export function CtaBanner() {
       />
       <Container className="relative text-center">
         <AnimatedSection>
-          <h2 className="mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mx-auto max-w-2xl text-3xl tracking-tight text-white sm:text-4xl">
             Klar til at komme online?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">

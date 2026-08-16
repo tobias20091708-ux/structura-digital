@@ -39,7 +39,7 @@ export default function KontaktPage() {
           <div>
             <AnimatedSection direction="left">
               <Badge>Kontakt</Badge>
-              <h1 className="mt-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
+              <h1 className="mt-6 text-4xl tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                 Få et gratis <GradientText>tilbud</GradientText>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-foreground/55">

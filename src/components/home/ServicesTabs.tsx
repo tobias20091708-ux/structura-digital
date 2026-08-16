@@ -18,7 +18,7 @@ export function ServicesTabs() {
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Services</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Det vi kan hjælpe dig med
           </h2>
           <p className="mt-4 text-lg text-white/60">
@@ -62,7 +62,7 @@ export function ServicesTabs() {
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.25, ease: "easeInOut" }}
               >
-                <h3 className="text-2xl font-bold tracking-tight text-foreground">
+                <h3 className="text-xl tracking-tight text-foreground sm:text-2xl">
                   {active.heading}
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-muted">{active.text}</p>

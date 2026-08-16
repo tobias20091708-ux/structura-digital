@@ -18,15 +18,15 @@ export function LegalPage({
         <Container>
           <div className="mx-auto max-w-3xl">
           <Badge invert>{badge}</Badge>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-6 text-4xl tracking-tight text-white sm:text-5xl lg:text-6xl">
             {title}
           </h1>
           <p className="mt-3 text-sm text-white/40">Sidst opdateret: {updated}</p>
           <article
             className={[
               "mt-12",
-              "[&_h2]:mt-12 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-white",
-              "[&_h3]:mt-8 [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-white",
+              "[&_h2]:mt-12 [&_h2]:text-xl [&_h2]:text-white",
+              "[&_h3]:mt-8 [&_h3]:text-base [&_h3]:text-white",
               "[&_p]:mt-4 [&_p]:text-[15px] [&_p]:leading-relaxed [&_p]:text-white/60",
               "[&_ul]:mt-4 [&_ul]:space-y-2 [&_ul]:pl-5 [&_ul]:text-[15px] [&_ul]:leading-relaxed [&_ul]:text-white/60 [&_li]:list-disc",
               "[&_strong]:font-semibold [&_strong]:text-white/85",

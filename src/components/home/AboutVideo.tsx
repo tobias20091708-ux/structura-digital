@@ -13,7 +13,7 @@ export function AboutVideo({ videoUrl }: { videoUrl?: string } = {}) {
       <Container>
         <AnimatedSection className="mx-auto max-w-2xl text-center">
           <Badge invert>Lær os at kende</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Se hvem vi er, og hvordan vi arbejder
           </h2>
           <p className="mt-4 text-lg text-white/60">

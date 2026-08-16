@@ -10,7 +10,7 @@ export function FaqSection() {
       <Container className="max-w-3xl">
         <AnimatedSection className="text-center">
           <Badge invert>Spørgsmål</Badge>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="mt-5 text-3xl tracking-tight text-white sm:text-4xl">
             Ofte stillede spørgsmål
           </h2>
           <p className="mt-4 text-lg text-white/60">

@@ -44,7 +44,7 @@ export function ContactForm() {
         )}
       >
         <CheckCircle2 className="h-12 w-12 text-success" />
-        <h3 className="mt-5 text-2xl font-semibold text-foreground">Tak for din besked!</h3>
+        <h3 className="mt-5 text-xl text-foreground sm:text-2xl">Tak for din besked!</h3>
         <p className="mt-3 max-w-sm text-sm leading-relaxed text-foreground/55">
           Vi vender tilbage hurtigst muligt — svar inden 24 timer.
         </p>

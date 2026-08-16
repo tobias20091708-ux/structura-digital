@@ -16,7 +16,7 @@ export function TrustStats() {
       <Container>
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
           {trustStats.map((item, i) => (
-            <AnimatedSection key={item.stat} delay={i * 0.1} className="text-center sm:text-left">
+            <AnimatedSection key={item.stat} delay={i * 0.1} className="text-left">
               <p className="text-3xl font-bold tracking-tight text-accent sm:text-4xl">
                 {item.stat}
               </p>
@@ -26,10 +26,10 @@ export function TrustStats() {
         </div>
 
         <AnimatedSection delay={0.2} className="mt-12 border-t border-white/[0.07] pt-8">
-          <p className="text-center text-sm font-medium text-white/40">
+          <p className="text-left text-sm font-medium text-white/40">
             Vi er nye — men vi bygger som de store.
           </p>
-          <ul className="mt-5 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          <ul className="mt-5 flex flex-wrap items-center justify-start gap-x-8 gap-y-3">
             {techBadges.map((badge) => (
               <li
                 key={badge.label}
