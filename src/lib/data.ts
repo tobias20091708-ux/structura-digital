@@ -18,10 +18,7 @@ export const contact = {
   email: "kontakt@webløsning.dk",
   phone: "30 13 73 28",
   phoneHref: "tel:+4530137328",
-  priceLine: "Starter fra 985 kr — ring for et tilbud på tlf. 30 13 73 28",
 };
-
-export const ctaText = "Få et tilbud";
 
 export type TrustStat = {
   stat: string;
@@ -30,8 +27,8 @@ export type TrustStat = {
 
 export const trustStats: TrustStat[] = [
   {
-    stat: "Fra 985 kr",
-    description: "Professionelle hjemmesider til priser små virksomheder har råd til.",
+    stat: "Skræddersyet",
+    description: "Hver løsning bygges til netop din virksomhed — ingen templates.",
   },
   {
     stat: "100% dansk",
@@ -166,11 +163,6 @@ export const benefits: Benefit[] = [
 export type FaqItem = { question: string; answer: string };
 
 export const faqItems: FaqItem[] = [
-  {
-    question: "Hvad koster en hjemmeside?",
-    answer:
-      "Vores hjemmesider starter fra 985 kr. Den endelige pris afhænger af dine behov — ring til os for et uforpligtende tilbud.",
-  },
   {
     question: "Hvor lang tid tager det?",
     answer: "De fleste hjemmesider er klar inden for 1-2 uger.",

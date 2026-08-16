@@ -28,9 +28,9 @@
   --color-success: var(--success);
   --color-success-strong: var(--success-strong);
   --color-card: var(--card);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-albert-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-bricolage);
+  --font-display: var(--font-dm-serif);
 }
 
 * {
@@ -50,9 +50,9 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--font-bricolage), var(--font-geist-sans), Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--font-dm-serif), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 .grain::after {
