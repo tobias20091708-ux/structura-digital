@@ -41,7 +41,7 @@ export function Hero() {
             <span
               className={`h-1.5 w-1.5 rounded-full bg-accent ${reduce ? "" : "animate-pulse"}`}
             />
-            Dansk webbureau bygget til vækst
+            Dansk IT-hjælp i øjenhøjde
           </motion.span>
 
           <motion.h1
@@ -50,9 +50,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="mt-8 text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Din næste hjemmeside{" "}
+            Driller teknikken?{" "}
             <span className="relative inline-block text-accent">
-              starter her.
+              Det klarer vi.
             </span>
           </motion.h1>
 
@@ -60,10 +60,12 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
-            className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-white/60 md:text-xl"
+            className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/60 md:text-xl"
           >
-            Vi bygger hjemmesider, kursusplatforme og landingssider, der skaffer
-            kunder, ikke bare besøgende.
+            Mange virksomheder vil gerne med på IT-bølgen, men har hverken tid
+            eller lyst til at bøvle med teknikken. Det tager vi os af. Vi bygger
+            hjemmesider, onlinekurser og landingssider og sørger for, at der er
+            styr på dine data, så du kan bruge tiden på det, du er bedst til.
           </motion.p>
 
           <motion.div
