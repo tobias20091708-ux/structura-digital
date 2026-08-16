@@ -50,7 +50,7 @@ export function Navbar() {
               : "border border-transparent bg-transparent"
           )}
         >
-          <Link href="/" aria-label="Structura Digital – forside">
+          <Link href="/" aria-label="Webløsning – forside">
             <Logo invert={onDark} />
           </Link>
 

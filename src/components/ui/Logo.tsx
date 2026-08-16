@@ -14,9 +14,9 @@ export function Logo({ className, invert }: { className?: string; invert?: boole
         <Boxes className={invert ? "text-white" : "text-background"} strokeWidth={2.25} size={18} />
       </span>
       <span className={invert ? "text-white" : "text-foreground"}>
-        Structura
+        webløsning
         <span className={invert ? "font-normal text-white/50" : "font-normal text-foreground/50"}>
-          Digital
+          .dk
         </span>
       </span>
     </span>

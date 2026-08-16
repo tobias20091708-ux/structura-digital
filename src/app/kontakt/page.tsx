@@ -8,9 +8,9 @@ import { ContactForm } from "@/components/contact/ContactForm";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Kontakt | Structura Digital",
+  title: "Kontakt | Webløsning",
   description:
-    "Få et gratis tilbud fra Structura Digital på din næste hjemmeside, kursusplatform, lead page eller data-tjek. Svar inden 24 timer.",
+    "Få et gratis tilbud fra Webløsning på din næste hjemmeside, kursusplatform, lead page eller data-tjek. Svar inden 24 timer.",
 };
 
 const infoItems = [

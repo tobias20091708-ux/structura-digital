@@ -3,8 +3,8 @@ import { LegalPage } from "@/components/legal/LegalPage";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Handelsbetingelser — Structura Digital",
-  description: "Læs handelsbetingelserne for ydelser leveret af Structura Digital.",
+  title: "Handelsbetingelser — Webløsning",
+  description: "Læs handelsbetingelserne for ydelser leveret af Webløsning.",
 };
 
 export default function TermsPage() {
@@ -12,7 +12,7 @@ export default function TermsPage() {
     <LegalPage badge="Betingelser" title="Handelsbetingelser" updated="7. august 2026">
       <h2>1. Generelt</h2>
       <p>
-        Disse handelsbetingelser gælder for alle ydelser leveret af Structura Digital
+        Disse handelsbetingelser gælder for alle ydelser leveret af Webløsning
         (&quot;vi&quot;, &quot;os&quot;) til kunden (&quot;du&quot;, &quot;kunden&quot;).
       </p>
       <p>Ved at bestille en ydelse accepterer du disse betingelser.</p>

@@ -3,9 +3,9 @@ import { LegalPage } from "@/components/legal/LegalPage";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Privatlivspolitik — Structura Digital",
+  title: "Privatlivspolitik — Webløsning",
   description:
-    "Læs hvordan Structura Digital behandler dine personoplysninger i henhold til GDPR.",
+    "Læs hvordan Webløsning behandler dine personoplysninger i henhold til GDPR.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
     <LegalPage badge="Privatliv" title="Privatlivspolitik" updated="7. august 2026">
       <h2>1. Dataansvarlig</h2>
       <p>
-        Structura Digital
+        Webløsning
         <br />
         E-mail: <a href={`mailto:${contact.email}`}>{contact.email}</a>
         <br />

@@ -65,7 +65,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/40 sm:flex-row">
-          <p>© 2026 Structura Digital. Alle rettigheder forbeholdt.</p>
+          <p>© 2026 Webløsning. Alle rettigheder forbeholdt.</p>
           <ul className="flex flex-wrap items-center gap-x-6 gap-y-2">
             {legalLinks.map((link) => (
               <li key={link.href}>

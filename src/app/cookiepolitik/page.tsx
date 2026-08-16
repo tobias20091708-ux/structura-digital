@@ -3,8 +3,8 @@ import { LegalPage, LegalTable } from "@/components/legal/LegalPage";
 import { contact } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Cookiepolitik — Structura Digital",
-  description: "Læs om hvilke cookies Structura Digital bruger, og hvordan du styrer dit samtykke.",
+  title: "Cookiepolitik — Webløsning",
+  description: "Læs om hvilke cookies Webløsning bruger, og hvordan du styrer dit samtykke.",
 };
 
 export default function CookiePolicyPage() {
