@@ -8,7 +8,7 @@ import { Cookie } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const COOKIE_NAME = "cookie_consent";
-const GA_ID = "G-XXXXXXXXXX";
+const GA_ID = "G-7W0W40S6TD";
 const META_PIXEL_ID = "XXXXXXXXXX";
 
 function readConsent(): string | null {
