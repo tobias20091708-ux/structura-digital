@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8" />
+<title>Webløsning.dk — Flyer</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: #e5e5e5;
+  }
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    margin: 12mm auto;
+    background: #faf7f2;
+    color: #231f1a;
+    padding: 18mm 16mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  }
+  .brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+  .brand span { color: #7a7168; font-weight: 400; }
+  h1 {
+    font-size: 44px;
+    line-height: 1.12;
+    margin: 24px 0 0 0;
+    font-weight: 400;
+  }
+  h1 em { color: #e4572e; font-style: normal; }
+  .sub {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #4a453e;
+    margin-top: 18px;
+    max-width: 90%;
+  }
+  .badge {
+    display: inline-block;
+    margin-top: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c43e1a;
+    border: 1.5px solid #e4572e;
+    border-radius: 999px;
+    padding: 8px 18px;
+  }
+  .pricing {
+    display: flex;
+    gap: 14px;
+    margin-top: 34px;
+  }
+  .pkg {
+    flex: 1;
+    border: 1.5px solid rgba(35,31,26,0.15);
+    border-radius: 14px;
+    padding: 16px 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background: #fffcf7;
+  }
+  .pkg.mid { border-color: #3f9478; border-width: 2px; }
+  .pkg .name { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: #7a7168; }
+  .pkg .price { font-size: 26px; font-weight: 700; margin-top: 6px; }
+  .pkg .note { font-size: 11px; color: #7a7168; }
+  .footer {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-top: 2px solid #171310;
+    padding-top: 20px;
+  }
+  .cta {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .cta small {
+    display: block;
+    font-weight: 400;
+    font-size: 13px;
+    color: #7a7168;
+    margin-top: 4px;
+  }
+  .phone {
+    background: #e4572e;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  @media print {
+    body { background: none; }
+    .sheet { margin: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div>
+      <div class="brand">webløsning<span>.dk</span></div>
+      <h1>Du mister kunder<br /><em>hver dag</em><br />uden en hjemmeside</h1>
+      <p class="sub">
+        Dine kunder googler efter dig, før de ringer. Vi bygger en hjemmeside,
+        der får dig frem på Google og gør det nemt for kunder at ringe til
+        dig — ingen bøvl med teknik, ingen skjulte gebyrer.
+      </p>
+      <div class="badge">🔥 De første 3 kunder får 25% rabat</div>
+
+      <div class="pricing">
+        <div class="pkg">
+          <div class="name">Basis</div>
+          <div class="price">2.999 kr.</div>
+          <div class="note">engangspris</div>
+        </div>
+        <div class="pkg mid">
+          <div class="name">Standard</div>
+          <div class="price">4.999 kr.</div>
+          <div class="note">engangspris — mest valgt</div>
+        </div>
+        <div class="pkg">
+          <div class="name">Pro</div>
+          <div class="price">7.999 kr.</div>
+          <div class="note">engangspris</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="cta">
+        Ring for en gratis, uforpligtende snak
+        <small>webløsning.dk · kontakt@webløsning.dk</small>
+      </div>
+      <div class="phone">30 13 73 28</div>
+    </div>
+  </div>
+</body>
+</html>
