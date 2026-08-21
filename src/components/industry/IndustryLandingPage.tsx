@@ -20,7 +20,7 @@ export function IndustryLandingPage({ industry }: { industry: Industry }) {
         <Container className="relative">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/[0.05] px-5 py-2 text-sm font-semibold text-white/75 backdrop-blur-sm">
-              Hjemmeside til {industry.title.toLowerCase()}
+              Hjemmeside til {industry.title}
             </span>
 
             <h1 className="mt-8 text-4xl leading-[1.1] tracking-tight text-white sm:text-5xl">
@@ -55,7 +55,7 @@ export function IndustryLandingPage({ industry }: { industry: Industry }) {
         <Container>
           <div className="mx-auto max-w-2xl">
             <h2 className="text-2xl text-foreground sm:text-3xl">
-              Hvorfor {industry.title.toLowerCase()} har brug for en hjemmeside
+              Hvorfor {industry.title} har brug for en hjemmeside
             </h2>
             <ul className="mt-8 space-y-5">
               {industry.painPoints.map((point) => (
