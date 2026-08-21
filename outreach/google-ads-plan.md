@@ -35,7 +35,7 @@ opsætningen 10 minutters arbejde.
 - Annonce: samme struktur som ovenfor, byt "VVS" ud med "elektriker"
 
 ### Annoncegruppe 3: Tømrer
-- Landingsside: `webløsning.dk/tommer`
+- Landingsside: `webløsning.dk/toemrer`
 - Nøgleord: "hjemmeside til tømrer", "webside tømrerfirma"
 - Annonce: samme struktur, byt til "tømrer"
 

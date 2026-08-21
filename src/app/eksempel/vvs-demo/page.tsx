@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   title: "Eksempel: Hjemmeside til VVS-firma | Webløsning.dk",
   description:
     "Se et eksempel på, hvordan en hjemmeside til et VVS-firma kan se ud. Vi bygger en gratis, personlig demo til din virksomhed på samme måde.",
-  robots: { index: false, follow: true },
 };
 
 const demoData = {

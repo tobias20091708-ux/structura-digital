@@ -130,7 +130,7 @@ export const industries: Industry[] = [
     metaDescription: "Få en hjemmeside der skaffer flere el-opgaver. Fra 2.999 kr., klar på få dage, optimeret så du findes på Google. Ring og hør mere.",
   },
   {
-    slug: "tommer",
+    slug: "toemrer",
     keyword: "tømrer",
     title: "Tømrere",
     heroHeading: "Dit håndværk fortjener en hjemmeside, der viser det frem",
@@ -161,7 +161,7 @@ export const trustStats: TrustStat[] = [
   },
   {
     stat: "Hurtig levering",
-    description: "Din nye hjemmeside er klar på 1-2 uger, ikke måneder.",
+    description: "Din nye hjemmeside er klar på 3-7 dage, ikke måneder.",
   },
 ];
 

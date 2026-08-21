@@ -13,7 +13,7 @@ export function Process() {
             Fra ide til lancering
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-white/60">
-            Fire trin. Ingen overraskelser. De fleste projekter er live på 1-2 uger.
+            Fire trin. Ingen overraskelser. De fleste projekter er live på 3-7 dage.
           </p>
         </AnimatedSection>
 
