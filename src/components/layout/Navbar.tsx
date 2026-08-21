@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const links = [
-  { href: "/#services", label: "Services" },
-  { href: "/#fordele", label: "Om os" },
+  { href: "/#priser", label: "Priser" },
+  { href: "/eksempel/vvs-demo", label: "Se eksempel" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -21,6 +21,9 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   const darkPages = [
     "/",
+    "/vvs",
+    "/elektriker",
+    "/toemrer",
     "/privatlivspolitik",
     "/cookiepolitik",
     "/handelsbetingelser",

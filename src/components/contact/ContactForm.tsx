@@ -2,9 +2,10 @@
 
 import { useActionState, useEffect, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
-import { CheckCircle2, Loader2, Send } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, Phone, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { submitContactForm, type LeadFormState } from "@/app/actions";
+import { contact } from "@/lib/data";
 import { cn } from "@/lib/cn";
 
 const projectTypes = [
@@ -26,7 +27,7 @@ export function ContactForm() {
   const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
-    if (state.status === "success") setDismissed(false);
+    if (state.status === "success" || state.status === "not-configured") setDismissed(false);
   }, [state.status]);
 
   function handleReset() {
@@ -35,6 +36,8 @@ export function ContactForm() {
   }
 
   const sent = state.status === "success" && !dismissed;
+  const notConfigured = state.status === "not-configured" && !dismissed;
+  const formHidden = sent || notConfigured;
 
   return (
     <div className="grid grid-cols-1">
@@ -56,14 +59,40 @@ export function ContactForm() {
         </Button>
       </div>
 
+      <div
+        aria-hidden={!notConfigured}
+        inert={!notConfigured || undefined}
+        className={cn(
+          "card col-start-1 row-start-1 flex flex-col items-center justify-center gap-4 rounded-2xl px-8 py-12 text-center transition-opacity duration-300",
+          notConfigured ? "opacity-100" : "pointer-events-none opacity-0"
+        )}
+      >
+        <p className="max-w-sm text-sm leading-relaxed text-foreground/55">
+          Formularen tager lige et øjeblik at sætte op — ring eller skriv til os i mellemtiden:
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Button href={contact.phoneHref}>
+            <Phone className="h-4 w-4" />
+            Ring {contact.phone}
+          </Button>
+          <Button href={`mailto:${contact.email}`} variant="outline">
+            <Mail className="h-4 w-4" />
+            Send en mail
+          </Button>
+        </div>
+        <Button variant="ghost" className="mt-2" onClick={handleReset}>
+          Tilbage til formularen
+        </Button>
+      </div>
+
       <form
         ref={formRef}
         action={formAction}
-        aria-hidden={sent || undefined}
-        inert={sent || undefined}
+        aria-hidden={formHidden || undefined}
+        inert={formHidden || undefined}
         className={cn(
           "card col-start-1 row-start-1 space-y-5 rounded-2xl p-8 transition-opacity duration-300",
-          sent ? "pointer-events-none opacity-0" : "opacity-100"
+          formHidden ? "pointer-events-none opacity-0" : "opacity-100"
         )}
       >
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">

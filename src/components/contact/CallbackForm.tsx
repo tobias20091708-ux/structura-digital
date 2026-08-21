@@ -39,6 +39,37 @@ export function CallbackForm({ className }: { className?: string }) {
     );
   }
 
+  if (state.status === "not-configured") {
+    return (
+      <div
+        className={cn(
+          "flex flex-col items-center gap-4 rounded-2xl border border-white/12 bg-white/[0.05] px-6 py-8 text-center",
+          className
+        )}
+      >
+        <p className="text-sm text-white/60">
+          Formularen tager lige et øjeblik at sætte op — ring eller skriv til os i mellemtiden:
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={contact.phoneHref}
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-accent-strong"
+          >
+            <Phone className="h-4 w-4" />
+            Ring {contact.phone}
+          </a>
+          <a
+            href={`mailto:${contact.email}?subject=${encodeURIComponent("Ring mig op")}&body=${encodeURIComponent("Navn: \nTelefon: ")}`}
+            className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
+            <Mail className="h-4 w-4" />
+            Send en mail
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <form
       ref={formRef}
