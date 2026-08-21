@@ -1,3 +1,26 @@
+## Tjekliste — de 5 ting du selv skal gøre
+
+1. **Formspree (kritisk, gør denne først)** — opret gratis konto på
+   formspree.io, opret en form, og sæt `FORMSPREE_FORM_ID` i Vercel →
+   Project Settings → Environment Variables → redeploy. Se
+   `.env.local.example`. Uden dette bliver ingen leads fra "Ring mig
+   op"/kontaktformularen sendt videre til dig — begge viser i stedet en pæn
+   "ring/mail direkte"-boks, så siden ikke ser i stykker ud, men du får ikke
+   nogen besked.
+2. **Google My Business** — opret en profil for Webløsning.dk med
+   telefonnummer 30 13 73 28 og link til webløsning.dk.
+3. **Google Search Console** — send `sitemap.xml` ind (findes automatisk på
+   webløsning.dk/sitemap.xml). Verifikationsfilen ligger allerede i koden, så
+   det er 2 minutters arbejde.
+4. **Outreach** — byg listen over 20 håndværkere og send beskeder, se punkt
+   1-4 nedenfor. Byg en demo pr. prospect først (`demo-strategi.md`) — det er
+   det, der får folk til at svare.
+5. **Quick wins** — sæt Google Ads-kampagnen op (`google-ads-plan.md`, 500 kr
+   budget), post i Facebook-grupper (`facebook-post.md`), og print flyeren
+   (`flyer.html` — åbn i browseren, Print → Gem som PDF).
+
+---
+
 # Outreach-plan — skaf den første betalende kunde
 
 Mål: mindst 1 betalende kunde inden for 14 dage. Håndværkere ringer ikke tilbage

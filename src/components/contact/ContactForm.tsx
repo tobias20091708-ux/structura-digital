@@ -28,7 +28,7 @@ export function ContactForm() {
 
   useEffect(() => {
     if (state.status === "success" || state.status === "not-configured") setDismissed(false);
-  }, [state.status]);
+  }, [state]);
 
   function handleReset() {
     formRef.current?.reset();
