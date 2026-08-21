@@ -20,6 +20,131 @@ export const contact = {
   phoneHref: "tel:+4530137328",
 };
 
+export const SITE_URL = "https://webløsning.dk";
+
+export function absoluteUrl(path: string = "/") {
+  return new URL(path, SITE_URL).toString();
+}
+
+export type PricingPackage = {
+  id: string;
+  name: string;
+  price: string;
+  priceNote: string;
+  description: string;
+  features: string[];
+  highlighted?: boolean;
+  ctaLabel: string;
+};
+
+export const pricingPackages: PricingPackage[] = [
+  {
+    id: "basis",
+    name: "Basis",
+    price: "2.999 kr.",
+    priceNote: "engangspris",
+    description: "Én side der fortæller kunderne hvem du er, hvad du laver, og hvordan de får fat i dig.",
+    features: [
+      "Forside med dine ydelser",
+      "Klik-for-at-ringe knap",
+      "Mobilvenlig",
+      "Klar på 3-5 dage",
+    ],
+    ctaLabel: "Vælg Basis",
+  },
+  {
+    id: "standard",
+    name: "Standard",
+    price: "4.999 kr.",
+    priceNote: "engangspris",
+    description: "Den mest valgte pakke. Flere sider, billeder af dit arbejde, og optimeret så Google finder dig.",
+    features: [
+      "Op til 5 undersider",
+      "Billedgalleri af dit arbejde",
+      "Søgemaskineoptimeret (SEO)",
+      "Google My Business opsætning",
+      "Klar på 5-7 dage",
+    ],
+    highlighted: true,
+    ctaLabel: "Vælg Standard",
+  },
+  {
+    id: "pro",
+    name: "Pro",
+    price: "7.999 kr.",
+    priceNote: "engangspris",
+    description: "Til dig der vil have det hele: booking, anmeldelser og løbende hjælp det første år.",
+    features: [
+      "Alt i Standard",
+      "Online booking / kontaktformular med notifikation",
+      "Opsætning af Google-anmeldelser",
+      "1 års hjælp og små rettelser inkluderet",
+    ],
+    ctaLabel: "Vælg Pro",
+  },
+];
+
+export const launchOffer = {
+  headline: "De første 3 kunder får 25% rabat",
+  subtext: "Vi er en ny virksomhed og vil gerne bevise, hvad vi kan. Derfor får de første 3 kunder 25% rabat på alle pakker.",
+};
+
+export type Industry = {
+  slug: string;
+  keyword: string;
+  title: string;
+  heroHeading: string;
+  heroSub: string;
+  painPoints: string[];
+  metaTitle: string;
+  metaDescription: string;
+};
+
+export const industries: Industry[] = [
+  {
+    slug: "vvs",
+    keyword: "VVS-firma",
+    title: "VVS'er",
+    heroHeading: "Din næste kunde googler \"VVS\" lige nu. Finder de dig?",
+    heroSub: "Vi bygger hjemmesider til VVS-firmaer, der gør ét: skaffer flere opkald. Ingen skjulte gebyrer, ingen bøvl med teknik.",
+    painPoints: [
+      "Kunder med akutte problemer (sprængt rør, stoppet afløb) googler og ringer til den første, de finder",
+      "Uden hjemmeside taber du de opkald til konkurrenter, der dukker op i søgningen",
+      "En hjemmeside med dit telefonnummer ét klik væk konverterer akutte opkald med det samme",
+    ],
+    metaTitle: "Hjemmeside til VVS-firma — Fra 2.999 kr. | Webløsning.dk",
+    metaDescription: "Få en hjemmeside der skaffer flere VVS-kunder. Fra 2.999 kr., klar på få dage, optimeret så du findes på Google. Ring og hør mere.",
+  },
+  {
+    slug: "elektriker",
+    keyword: "elektriker",
+    title: "Elektrikere",
+    heroHeading: "Uden hjemmeside findes du ikke, når folk googler \"elektriker\"",
+    heroSub: "Vi bygger hjemmesider til elektrikere, der viser dit arbejde, dine autorisationer og gør det nemt for kunder at ringe.",
+    painPoints: [
+      "9 ud af 10 tjekker Google, før de vælger en elektriker",
+      "Uden en side, der ligger øverst, går opgaven til en konkurrent med bedre synlighed",
+      "En simpel, hurtig hjemmeside gør dig til det oplagte valg — også for erhvervskunder",
+    ],
+    metaTitle: "Hjemmeside til elektriker — Fra 2.999 kr. | Webløsning.dk",
+    metaDescription: "Få en hjemmeside der skaffer flere el-opgaver. Fra 2.999 kr., klar på få dage, optimeret så du findes på Google. Ring og hør mere.",
+  },
+  {
+    slug: "tommer",
+    keyword: "tømrer",
+    title: "Tømrere",
+    heroHeading: "Dit håndværk fortjener en hjemmeside, der viser det frem",
+    heroSub: "Vi bygger hjemmesider til tømrere med billeder af dine projekter, dine ydelser og en tydelig vej til at kontakte dig.",
+    painPoints: [
+      "Gode referencer sælger opgaver — men kun hvis folk kan se dem",
+      "Uden hjemmeside er du afhængig af mund-til-mund og opslagstavler",
+      "En hjemmeside arbejder for dig 24/7, også når du står midt i en opgave",
+    ],
+    metaTitle: "Hjemmeside til tømrer — Fra 2.999 kr. | Webløsning.dk",
+    metaDescription: "Få en hjemmeside der skaffer flere tømreropgaver. Fra 2.999 kr., klar på få dage, optimeret så du findes på Google. Ring og hør mere.",
+  },
+];
+
 export type TrustStat = {
   stat: string;
   description: string;
