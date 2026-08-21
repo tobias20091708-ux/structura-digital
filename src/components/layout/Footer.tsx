@@ -2,11 +2,11 @@ import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { Container } from "@/components/ui/Container";
-import { contact } from "@/lib/data";
+import { contact, industries } from "@/lib/data";
 
 const links = [
-  { href: "/#services", label: "Services" },
-  { href: "/#fordele", label: "Om os" },
+  { href: "/#priser", label: "Priser" },
+  { href: "/eksempel/vvs-demo", label: "Se eksempel" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
@@ -20,12 +20,12 @@ export function Footer() {
   return (
     <footer className="bg-dark pt-16 pb-8">
       <Container>
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-[1.1fr_0.8fr_0.8fr_1fr]">
           <div>
             <Logo invert />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">
-              Vi bygger hjemmesider, online kurser, lead pages og tjekker din virksomheds data,
-              så små virksomheder i Danmark bliver fundet af flere kunder.
+              Vi bygger hjemmesider til håndværkere og små virksomheder i Danmark, så flere
+              kunder finder dig på Google.
             </p>
           </div>
 
@@ -39,6 +39,22 @@ export function Footer() {
                     className="text-sm text-white/50 transition-colors hover:text-white"
                   >
                     {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-bold text-white">Brancher</h4>
+            <ul className="mt-4 space-y-3">
+              {industries.map((industry) => (
+                <li key={industry.slug}>
+                  <Link
+                    href={`/${industry.slug}`}
+                    className="text-sm text-white/50 transition-colors hover:text-white"
+                  >
+                    {industry.title}
                   </Link>
                 </li>
               ))}

@@ -69,11 +69,16 @@ export default function RootLayout({
       lang="da"
       className={`${albertSans.variable} ${geistMono.variable} ${dmSerif.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col overflow-x-hidden bg-background text-foreground">
+      <body className="flex min-h-full flex-col overflow-x-hidden bg-background pb-16 text-foreground md:pb-0">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
         <AmbientOrbs />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
+        <MobileCallBar />
         <CookieConsent />
         <Analytics />
       </body>
