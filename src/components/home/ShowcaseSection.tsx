@@ -41,12 +41,15 @@ export function ShowcaseSection() {
             </Link>
           </AnimatedSection>
 
-          <AnimatedSection direction="right" delay={0.1}>
-            <Link href="/eksempel/vvs-demo" className="block scale-[0.94] transition-transform hover:scale-[0.96]">
-              <div className="pointer-events-none">
-                <DemoSiteTemplate data={previewData} />
-              </div>
-            </Link>
+          <AnimatedSection direction="right" delay={0.1} className="relative">
+            <div className="pointer-events-none select-none">
+              <DemoSiteTemplate data={previewData} />
+            </div>
+            <Link
+              href="/eksempel/vvs-demo"
+              aria-label="Se eksemplet i fuld størrelse"
+              className="absolute inset-0 rounded-xl ring-0 ring-primary-light/40 transition-all hover:ring-4"
+            />
           </AnimatedSection>
         </div>
       </Container>
