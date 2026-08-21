@@ -2,8 +2,9 @@
 
 import { useActionState, useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
-import { CheckCircle2, Loader2, PhoneCall } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, Phone, PhoneCall } from "lucide-react";
 import { requestCallback, type LeadFormState } from "@/app/actions";
+import { contact } from "@/lib/data";
 import { cn } from "@/lib/cn";
 
 const initialState: LeadFormState = { status: "idle" };

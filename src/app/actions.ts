@@ -3,7 +3,7 @@
 import { contact } from "@/lib/data";
 
 export type LeadFormState = {
-  status: "idle" | "success" | "error";
+  status: "idle" | "success" | "error" | "not-configured";
   message?: string;
 };
 
@@ -17,7 +17,7 @@ async function sendToFormspree(payload: Record<string, string>) {
       "FORMSPREE_FORM_ID mangler som miljøvariabel — lead blev IKKE sendt videre:",
       payload
     );
-    throw new Error("missing-form-id");
+    throw new Error("not-configured");
   }
 
   const res = await fetch(`https://formspree.io/f/${formId}`, {
@@ -49,7 +49,10 @@ export async function requestCallback(
       phone,
     });
     return { status: "success" };
-  } catch {
+  } catch (err) {
+    if (err instanceof Error && err.message === "not-configured") {
+      return { status: "not-configured" };
+    }
     return { status: "error", message: fallbackErrorMessage };
   }
 }
@@ -78,7 +81,10 @@ export async function submitContactForm(
       message,
     });
     return { status: "success" };
-  } catch {
+  } catch (err) {
+    if (err instanceof Error && err.message === "not-configured") {
+      return { status: "not-configured" };
+    }
     return { status: "error", message: fallbackErrorMessage };
   }
 }
