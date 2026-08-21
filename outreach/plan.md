@@ -43,8 +43,13 @@ kende undervejs. Sådan gør du:
 1. **Google Maps**: søg fx `"VVS København"`, `"elektriker København"`,
    `"tømrer København"`. Klik dig igennem de første 20-30 resultater.
    Firmaer uden et "Website"-link under navnet er kandidater.
-2. **Krak.dk**: søg samme brancher + "København". Krak viser ofte om
-   firmaet har en hjemmeside registreret — mangler den, er det et godt tegn.
+2. **Krak.dk**: brug søgelinks direkte (verificeret format —
+   virksomhedsnavn/branche + by + `/firmaer`):
+   - [VVS-firmaer København](https://www.krak.dk/vvs-firmaer+k%C3%B8benhavn/firmaer)
+   - [Elektriker København](https://www.krak.dk/elektriker+k%C3%B8benhavn/firmaer)
+   - [Tømrer København](https://www.krak.dk/t%C3%B8mrer+k%C3%B8benhavn/firmaer)
+   Krak viser ofte om firmaet har en hjemmeside registreret — mangler den,
+   er det et godt tegn.
 3. **CVR (cvr.dk / datacvr.virk.dk)**: slå firmaet op for at bekræfte det er
    aktivt (status "Normal", ikke under konkurs/ophør) og find den reelle ejers
    navn — det gør din henvendelse mere personlig ("Hej [navn]" i stedet for

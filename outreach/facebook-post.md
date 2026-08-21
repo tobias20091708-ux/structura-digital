@@ -1,10 +1,17 @@
 # Facebook-opslag til lokale håndværker-/erhvervsgrupper
 
-Find grupper som fx "Håndværkere i København", "Erhvervsnetværk København",
-lokale bydelsgrupper ("Du ved du er fra Nørrebro når...") eller
-brancheforenings-grupper. Tjek gruppereglerne først — nogle tillader ikke
-reklame/salgsopslag, andre har en fast "reklamedag". Spørg admin, hvis du er
-i tvivl.
+Nogle konkrete grupper at starte med (fundet via søgning — tjek selv om de
+stadig er aktive og hvad reglerne er, før du poster; nogle tillader ikke
+reklame/salgsopslag, andre har en fast "reklamedag"):
+
+- [Selvstændige håndværkere København](https://www.facebook.com/groups/454984601524491/)
+- [Håndværker Gruppen](https://www.facebook.com/groups/haandvaerker/)
+- [HåndværkerNET](https://www.facebook.com/groups/907572853481199/)
+- [Bygnetværk - Håndværker søges](https://www.facebook.com/groups/252108991497588)
+- [Erhvervsnetværk](https://www.facebook.com/erhvervsnetvaerk.dk/) (siden har lokale by-specifikke netværksgrupper)
+
+Derudover: lokale bydelsgrupper (søg "[bydelsnavn] netværk" eller "du ved du
+er fra [bydel] når") kan også fungere, men er mere blandet publikum.
 
 ---
 
