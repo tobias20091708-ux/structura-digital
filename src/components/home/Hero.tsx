@@ -1,9 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { Flame, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { CallbackForm } from "@/components/contact/CallbackForm";
+import { contact, launchOffer } from "@/lib/data";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -41,7 +43,7 @@ export function Hero() {
             <span
               className={`h-1.5 w-1.5 rounded-full bg-accent ${reduce ? "" : "animate-pulse"}`}
             />
-            Dansk IT-hjælp i øjenhøjde
+            Hjemmesider til håndværkere og små virksomheder
           </motion.span>
 
           <motion.h1
@@ -50,10 +52,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="mt-8 text-4xl leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Driller teknikken?{" "}
-            <span className="relative inline-block text-accent">
-              Det klarer vi.
-            </span>
+            Du mister kunder{" "}
+            <span className="relative inline-block text-accent">hver dag</span>{" "}
+            uden en hjemmeside
           </motion.h1>
 
           <motion.p
@@ -62,22 +63,43 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-white/60 md:text-xl"
           >
-            Mange virksomheder vil gerne med på IT-bølgen, men har hverken tid
-            eller lyst til at bøvle med teknikken. Det tager vi os af. Vi bygger
-            hjemmesider, onlinekurser og landingssider og sørger for, at der er
-            styr på dine data, så du kan bruge tiden på det, du er bedst til.
+            Dine kunder googler efter dig, før de ringer. Vi bygger en hjemmeside
+            der får dig frem på Google og gør det nemt at ringe til dig — fra
+            2.999 kr., klar på få dage.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 flex flex-wrap items-center justify-center gap-4"
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="mx-auto mt-8 flex w-fit items-center gap-2.5 rounded-full border border-accent/30 bg-accent/[0.1] px-5 py-2 text-sm font-semibold text-accent"
           >
-            <Button href="/kontakt" size="lg">
-              Kontakt os
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            <Flame className="h-4 w-4" />
+            {launchOffer.headline}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          >
+            <Button href={contact.phoneHref} size="lg">
+              <Phone className="h-4 w-4" />
+              Ring {contact.phone}
             </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mx-auto mt-6 max-w-md"
+          >
+            <p className="mb-3 text-sm text-white/45">
+              Eller udfyld — så ringer vi dig op:
+            </p>
+            <CallbackForm />
           </motion.div>
         </div>
       </Container>

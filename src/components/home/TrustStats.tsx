@@ -27,7 +27,8 @@ export function TrustStats() {
 
         <AnimatedSection delay={0.2} className="mt-12 border-t border-white/[0.07] pt-8">
           <p className="text-left text-sm font-medium text-white/40">
-            Vi er nye, men vi bygger som de store.
+            Vi er en ny virksomhed uden lange kundelister — derfor får de første 3 kunder 25%
+            rabat, og du taler altid direkte med den, der bygger din side.
           </p>
           <ul className="mt-5 flex flex-wrap items-center justify-start gap-x-8 gap-y-3">
             {techBadges.map((badge) => (
