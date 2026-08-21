@@ -1,8 +1,10 @@
 "use client";
 
-import { useRef, useState, type FormEvent } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
+import { useFormStatus } from "react-dom";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { submitContactForm, type LeadFormState } from "@/app/actions";
 import { cn } from "@/lib/cn";
 
 const projectTypes = [
@@ -16,22 +18,23 @@ const projectTypes = [
 const inputClasses =
   "w-full rounded-xl border border-foreground/10 bg-foreground/[0.03] px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 outline-none transition-colors focus:border-primary/60 focus:bg-foreground/[0.05]";
 
-export function ContactForm() {
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
-  const formRef = useRef<HTMLFormElement>(null);
+const initialState: LeadFormState = { status: "idle" };
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("sending");
-    window.setTimeout(() => setStatus("sent"), 900);
-  }
+export function ContactForm() {
+  const [state, formAction] = useActionState(submitContactForm, initialState);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [dismissed, setDismissed] = useState(false);
+
+  useEffect(() => {
+    if (state.status === "success") setDismissed(false);
+  }, [state.status]);
 
   function handleReset() {
     formRef.current?.reset();
-    setStatus("idle");
+    setDismissed(true);
   }
 
-  const sent = status === "sent";
+  const sent = state.status === "success" && !dismissed;
 
   return (
     <div className="grid grid-cols-1">
@@ -55,7 +58,7 @@ export function ContactForm() {
 
       <form
         ref={formRef}
-        onSubmit={handleSubmit}
+        action={formAction}
         aria-hidden={sent || undefined}
         inert={sent || undefined}
         className={cn(
@@ -125,21 +128,32 @@ export function ContactForm() {
           />
         </Field>
 
-        <Button type="submit" className="w-full" size="lg">
-          {status === "sending" ? (
-            <>
-              <Loader2 className="h-4 w-4 animate-spin" />
-              Sender...
-            </>
-          ) : (
-            <>
-              Send besked
-              <Send className="h-4 w-4" />
-            </>
-          )}
-        </Button>
+        {state.status === "error" && (
+          <p className="text-sm text-accent">{state.message}</p>
+        )}
+
+        <SubmitButton />
       </form>
     </div>
+  );
+}
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+  return (
+    <Button type="submit" className="w-full" size="lg" disabled={pending}>
+      {pending ? (
+        <>
+          <Loader2 className="h-4 w-4 animate-spin" />
+          Sender...
+        </>
+      ) : (
+        <>
+          Send besked
+          <Send className="h-4 w-4" />
+        </>
+      )}
+    </Button>
   );
 }
 
